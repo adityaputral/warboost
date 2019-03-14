@@ -6,12 +6,16 @@ class C_home extends CI_Controller {
 		session_start();
 		parent::__construct();
 	}
-	public function comingsoon(){
-		$this->load->view('Soon');
-	}
+
 	public function index(){
+		$this->load->model('game');
+		$this->load->model('booster');
+
+		$aData['listGame'] = $this->game->funcGetListGame();
+		$aData['listBooster'] = $this->booster->funcGetListBooster();
+
 		$this->load->view('templates_user/V_header');
-		$this->load->view('pages_user/V_home');
+		$this->load->view('pages_user/V_home', $aData);
 		$this->load->view('templates_user/V_footer');
     }
 }

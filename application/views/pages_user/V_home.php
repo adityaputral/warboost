@@ -59,78 +59,21 @@
                 data-item-padding
         -->
     <div class="youplay-carousel" data-autoplay="5000">
-        <a class="angled-img" href="store-product-1.html">
-            <div class="img">
-                <img src="<?php echo base_url();?>assets/images/games/Games_CSGO.png" alt="">
-            </div>
-            <div class="over-info">
-                <div>
+        <?php foreach ($listGame as $game){?>
+            <a class="angled-img" href="store-product-1.html">
+                <div class="img">
+                    <img src="<?php echo base_url();?>assets/images/games/<?php echo $game['path_logo'];?>" alt="">
+                </div>
+                <div class="over-info">
                     <div>
-                        <h4>Counter Strike : <br>Global Offensive</h4>
+                        <div>
+                            <h4><?php echo $game['nama']; ?></h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
-        <a class="angled-img" href="#">
-            <div class="img">
-                <img src="<?php echo base_url();?>assets/images/games/Games_Dota2.jpg" alt="">
-            </div>
-            <div class="over-info">
-                <div>
-                    <div>
-                        <h4>Dota 2</h4>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="angled-img" href="#">
-            <div class="img">
-                <img src="<?php echo base_url();?>assets/images/games/Games_overwatch.jpg" alt="">
-            </div>
-            <div class="over-info">
-                <div>
-                    <div>
-                        <h4>Overwatch</h4>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="angled-img" href="#">
-            <div class="img">
-                <img src="<?php echo base_url();?>assets/images/games/Games_hearthstone.png" alt="">
-            </div>
-            <div class="over-info">
-                <div>
-                    <div>
-                        <h4>Hearthstone</h4>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="angled-img" href="#">
-            <div class="img">
-                <img src="<?php echo base_url();?>assets/images/games/Games_LoL.jpg" alt="">
-            </div>
-            <div class="over-info">
-                <div>
-                    <div>
-                        <h4>League of Legends</h4>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="angled-img" href="#">
-            <div class="img">
-                <img src="<?php echo base_url();?>assets/images/games/Games_apex.png" alt="">
-            </div>
-            <div class="over-info">
-                <div>
-                    <div>
-                        <h4>Apex Legends</h4>
-                    </div>
-                </div>
-            </div>
-        </a>
+            </a>
+            
+        <?php } ?>
     </div>
     <!-- /Images With Text -->
 
