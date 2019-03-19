@@ -6,6 +6,7 @@ class booster extends CI_Model{
     }
     
     function funcGetListBooster(){
+        $this->db->join('status_booster', 'status_booster.id = booster.id_status');
         $aListBooster = $this->db->get('booster');
         return $aListBooster->result_array();
     }

@@ -14,7 +14,7 @@
         <!-- Social Buttons -->
         <div class="social">
             <div class="container">
-                <h3>Connect socially with <strong>Youplay</strong></h3>
+                <h3>Connect socially with <strong>Warboost</strong></h3>
 
                 <div class="social-icons">
                     <div class="social-icon">
@@ -72,6 +72,59 @@
 </form>
 </div>
 <!-- /Search Block -->
+
+<!-- Order Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Choose Game to Boost</h4>
+            </div>
+            <div class="modal-body">
+                <?php $i=0; foreach ($listGame as $game){ ?>
+                    <?php if($i == 2){ ?>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a class="angled-img" href="store-product-1.html">
+                                    <div class="img">
+                                        <img src="<?php echo base_url();?>assets/images/games/<?php echo $game['path_logo'];?>" alt="">
+                                    </div>
+                                    <div class="over-info">
+                                        <div>
+                                            <div>
+                                                <h4><?php echo $game['nama_game'];?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <?php } else{ ?>
+                        <div class="col-md-4">
+                            <a class="angled-img" href="store-product-1.html">
+                                <div class="img">
+                                    <img src="<?php echo base_url();?>assets/images/games/<?php echo $game['path_logo'];?>" alt="">
+                                </div>
+                                <div class="over-info">
+                                    <div>
+                                        <div>
+                                            <h4><?php echo $game['nama_game']; echo $i;?></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <?php }?>
+                <?php $i++; } ?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modals -->
 
 
 
