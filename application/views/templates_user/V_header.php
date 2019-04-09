@@ -92,7 +92,7 @@
                 <span class="icon-bar"></span>
             </button>
             
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="<?php echo base_url(); ?>">
                     <img src="assets/images/logo-light.png" alt="">
                 </a>
             
@@ -102,7 +102,7 @@
                 <ul class="nav navbar-nav">
                     
         <li class=" dropdown dropdown-hover">
-            <a href="blog-1.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <a href="aboutUs" class role="button" aria-expanded="false">
                 About Us
                 <span class="label">information</span>
             </a>
