@@ -53,3 +53,4 @@ $route['default_controller'] = 'C_home/index';
 $route['games/(:any)'] = 'C_pages/funcIndex/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['aboutUs'] = 'C_aboutUs/index';
