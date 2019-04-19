@@ -51,6 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'C_home/index';
 $route['games/(:any)'] = 'C_pages/funcIndex/$1';
-$route['404_override'] = '';
+$route['404_override'] = 'C_home/func404';
 $route['translate_uri_dashes'] = FALSE;
 $route['aboutUs'] = 'C_aboutUs/index';

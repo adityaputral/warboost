@@ -94,7 +94,6 @@
             
                 <a class="navbar-brand" href="<?php echo base_url(); ?>">
                     <img src="<?php echo base_url();?>assets/images/logo-light.png" alt="">
-                    <img src="assets/images/logo-light.png" alt="">
                 </a>
             
         </div>
@@ -117,21 +116,21 @@
             </a>
             <div class="dropdown-menu" style="width: 320px;">
                 <ul role="menu">
-                    <li><a href="blog-1.html">CS:GO</a>
+                    <li><a href="<?php echo base_url();?>games/csgo">CS:GO</a>
                     </li>
-                    <li><a href="blog-2.html">Dota 2</a>
+                    <li><a href="<?php echo base_url();?>games/dota-2">Dota 2</a>
                     </li>
-                    <li><a href="blog-3.html">Overwatch</a>
+                    <li><a href="<?php echo base_url();?>games/overwatch">Overwatch</a>
                     </li>
                 </ul>
                 <!--
                         -->
                 <ul role="menu">
-                <li><a href="blog-3.html">Rocket League</a>
+                <li><a href="<?php echo base_url();?>games/rocket-league">Rocket League</a>
                     </li>
-                    <li><a href="blog-post-2.html">League of Legends</a>
+                    <li><a href="<?php echo base_url();?>games/lol">League of Legends</a>
                     </li>
-                    <li><a href="blog-post-3.html">Apex Legends</a>
+                    <li><a href="<?php echo base_url();?>games/apex-legends">Apex Legends</a>
                     </li>
                 </ul>
             </div>

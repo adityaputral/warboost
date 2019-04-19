@@ -1,7 +1,6 @@
 <?php
 class C_pages extends CI_Controller {
 	public function __construct(){
-		session_start();
 		parent::__construct();
 	}
       
