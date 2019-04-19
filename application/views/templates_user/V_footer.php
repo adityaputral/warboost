@@ -86,7 +86,7 @@
                     <?php if($i == 2){ ?>
                         <div class="row">
                             <div class="col-md-4">
-                                <a class="angled-img" href="store-product-1.html">
+                                <a class="angled-img" href="games/<?php echo $game['abreviasi']; ?>">
                                     <div class="img">
                                         <img src="<?php echo base_url();?>assets/images/games/<?php echo $game['path_logo'];?>" alt="">
                                     </div>
@@ -102,14 +102,14 @@
                         </div>
                     <?php } else{ ?>
                         <div class="col-md-4">
-                            <a class="angled-img" href="store-product-1.html">
+                            <a class="angled-img" href="games/<?php echo $game['abreviasi']; ?>">
                                 <div class="img">
                                     <img src="<?php echo base_url();?>assets/images/games/<?php echo $game['path_logo'];?>" alt="">
                                 </div>
                                 <div class="over-info">
                                     <div>
                                         <div>
-                                            <h4><?php echo $game['nama_game']; echo $i;?></h4>
+                                            <h4><?php echo $game['nama_game'];?></h4>
                                         </div>
                                     </div>
                                 </div>

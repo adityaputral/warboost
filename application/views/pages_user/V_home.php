@@ -57,7 +57,7 @@
         -->
     <div class="youplay-carousel" data-autoplay="5000">
         <?php foreach ($listGame as $game){?>
-            <a class="angled-img" href="store-product-1.html">
+            <a class="angled-img" href="games/<?php echo $game['abreviasi']; ?>">
                 <div class="img">
                     <img src="<?php echo base_url();?>assets/images/games/<?php echo $game['path_logo'];?>" alt="">
                 </div>
