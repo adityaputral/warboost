@@ -54,3 +54,4 @@ $route['games/(:any)'] = 'C_pages/funcIndex/$1';
 $route['404_override'] = 'C_home/func404';
 $route['translate_uri_dashes'] = FALSE;
 $route['aboutUs'] = 'C_aboutUs/index';
+$route['boosters'] = 'C_boosters/index';

@@ -15,6 +15,7 @@
         text-align: justify;
     }
 </style>
+
 <section class="youplay-banner banner-top youplay-banner-parallax xsmall">
 
     <div class="image" data-speed="0.4">
