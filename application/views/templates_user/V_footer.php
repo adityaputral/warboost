@@ -129,6 +129,7 @@
 
 
 
+
 <!-- START: Scripts -->
 
 <!-- Object Fit Polyfill -->
@@ -181,6 +182,35 @@
 <!-- Youplay -->
 <script src="<?php echo base_url("assets/js/youplay.min.js");?>"></script>
 <script src="<?php echo base_url("assets/js/youplay-init.js");?>"></script>
+
+<?php
+$notif = $this->session->flashdata('notification');
+$stat = $this->session->flashdata('status');
+if(isset($notif)){
+  echo "<script>
+  $(window).on('load', function(){
+    showRegistrationStatus('$stat');
+  });
+
+  function showRegistrationStatus(status) {
+    if(status == 'error'){
+      swal(
+        'Gagal',
+        '$notif',
+        status
+      )
+    } else if(status == 'success'){
+      swal(
+        'Berhasil',
+        '$notif',
+        status
+      )
+    }
+    
+  }
+</script>";
+}
+?>
 
 
 

@@ -42,6 +42,20 @@ class user extends CI_Model{
 		}
     }
     
-    
+    function addUser($username, $password, $nama, $email){
+		$data = array(
+        	'username' => $username,
+        	'password' => $password,
+            'nama' => $nama,
+            'email' => $email
+		);
+		$result = $this->db->insert('user', $data);
+		if($result){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 }
 ?>

@@ -33,18 +33,20 @@ class C_login extends CI_Controller {
                     redirect('/');
                 }
                 else{
-                    $this->session->set_flashdata('error_login_password', 'Server Down');
-                    $this->session->set_flashdata('error_login_username', 'Server Down');
+                    $this->session->set_flashdata('status', 'error');
+                    $this->session->set_flashdata('notification', 'Server Probably Down');
                     redirect('/');
                 }
             }
             else{
-                $this->session->set_flashdata('error_login_password', 'Incorrect Password');
-                redirect('/aboutUs');
+                $this->session->set_flashdata('status', 'error');
+                $this->session->set_flashdata('notification', 'Incorrect Password');
+                redirect('/');
             }
         }
         else{
-            $this->session->set_flashdata('error_login_username', 'Incorrect Username');
+            $this->session->set_flashdata('status', 'error');
+            $this->session->set_flashdata('notification', 'Incorrect Username');
             redirect('/');
         }
 

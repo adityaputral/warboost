@@ -23,6 +23,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/bootstrap/dist/css/bootstrap.min.css" />
 
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/sweetalert2.min.css">
+
     <!-- Flickity -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/flickity/dist/flickity.min.css" />
 
@@ -137,7 +139,7 @@
         </li>
 
         <li class="">
-            <a href="boosters" class role="button" aria-expanded="false">
+            <a href="<?php echo base_url() ?>boosters" class role="button" aria-expanded="false">
                 Boosters
                 <span class="label">full list</span>
             </a>
@@ -276,12 +278,12 @@
                             
                                 <p>Username:</p>
                                 <div class="youplay-input">
-                                    <input type="text" name="username">
+                                    <input type="text" name="username" required>
                                 </div>
 
                                 <p>Password:</p>
                                 <div class="youplay-input">
-                                    <input type="password" name="pwd">
+                                    <input type="password" name="pwd" required>
                                 </div>
 
                                 <div class="youplay-checkbox mb-15 ml-5">
@@ -317,21 +319,26 @@
                     <h4 class="modal-title">Register</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post">
+                    <form action="<?php echo base_url();?>register" method="post">
                         <div>
-                            <p>Username:</p>
+                            <p>Name:</p>
                             <div class="youplay-input">
-                                <input type="text" name="user_login" />
+                                <input type="text" name="name" required/>
                             </div>
 
                             <p>E-mail:</p>
                             <div class="youplay-input">
-                                <input type="text" name="user_email" />
+                                <input type="text" name="email" required/>
+                            </div>
+
+                            <p>Username:</p>
+                            <div class="youplay-input">
+                                <input type="text" name="username" required/>
                             </div>
 
                             <p>Password:</p>
                             <div class="youplay-input">
-                                <input type="password" name="user_password" />
+                                <input type="password" name="pwd" required/>
                             </div>
 
                             <p>
