@@ -149,74 +149,60 @@
             <ul class="nav navbar-nav navbar-right">
                 
                     
-        <!-- <li class=" dropdown dropdown-hover">
+        <?php if($this->session->userdata('logged_in')){ ?>
+            <li class=" dropdown dropdown-hover">
             <a href="user-activity.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                KuroKy
+                <?php echo $this->session->userdata('nama');?>
                 <span class="badge bg-default">8</span>
                 <span class="caret"></span>
                 <span class="label">user</span>
             </a><div class="dropdown-menu"><ul role="menu">
                             
-        <li>
-            <a href="user-activity.html">
-                Activity
-                
-                
-                
-            </a>
-        </li>
-        <li>
-            <a href="user-profile.html">
-                Profile
-                
-                
-                
-            </a>
-        </li>
-        <li>
-            <a href="user-messages.html">
-                Messages
-                <span class="badge bg-default">8</span>
-                
-                
-            </a>
-        </li>
-        <li>
-            <a href="user-messages-compose.html">
-                Messages Compose
-                
-                
-                
-            </a>
-        </li>
-        <li>
-            <a href="user-settings.html">
-                Settings
-                
-                
-                
-            </a>
-        </li>
-        <li>
-            <a href="https://nkdev.info/docs/youplay-html/">
-                Documentation
-                
-                
-                
-            </a>
-        </li>
-        <li>
-            <a href="https://themeforest.net/item/youplay-game-template-based-on-bootstrap/11306207?ref=_nK">
-                Purchase
-                
-                
-                
-            </a>
-        </li>
-                        </ul></div>
-        </li> -->
-                
+            <li>
+                <a href="user-activity.html">
+                    Activity
+                    
+                    
+                    
+                </a>
+            </li>
+            <li>
+                <a href="user-profile.html">
+                    Profile
+                    
+                    
+                    
+                </a>
+            </li>
+            <li>
+                <a href="user-messages.html">
+                    Messages
+                    <span class="badge bg-default">8</span>
+                    
+                    
+                </a>
+            </li>
+            <li>
+                <a href="user-settings.html">
+                    Settings
+                    
+                    
+                    
+                </a>
+            </li>
 
+            <li>
+                <a href="<?php echo base_url(); ?>logout">
+                    Logout
+                    
+                    
+                    
+                </a>
+            </li>
+                            </ul></div>
+            </li>
+
+        <?php } ?>
                 
                     <li>
                         <a class="search-toggle" href="search.html">
@@ -279,17 +265,18 @@
                     </li>
                 
 
-                
-                    <li class="dropdown dropdown-hover dropdown-user">
+                    <?php if(!$this->session->userdata('logged_in')){ ?>
+                        <li class="dropdown dropdown-hover dropdown-user">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
                             <i class="fa fa-user"></i>
                             <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu">
-                            <form class="navbar-login-form" action="#" method="post">
+                            <form class="navbar-login-form" action="<?php echo base_url();?>loginAttempt" method="post">
+                            
                                 <p>Username:</p>
                                 <div class="youplay-input">
-                                    <input type="text" name="log">
+                                    <input type="text" name="username">
                                 </div>
 
                                 <p>Password:</p>
@@ -311,6 +298,8 @@
                             </form>
                         </div>
                     </li>
+                    <?php } ?>
+                    
                 
             </ul>
             
