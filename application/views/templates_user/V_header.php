@@ -137,7 +137,7 @@
         </li>
 
         <li class="">
-            <a href="store-1.html" class="" role="button" aria-expanded="false">
+            <a href="boosters" class role="button" aria-expanded="false">
                 Boosters
                 <span class="label">full list</span>
             </a>

@@ -53,3 +53,4 @@ $route['default_controller'] = 'C_home/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['aboutUs'] = 'C_aboutUs/index';
+$route['boosters'] = 'C_boosters/index';
