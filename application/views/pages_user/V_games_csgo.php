@@ -54,23 +54,9 @@
                         <div class="col-sm-6">
                             <div class="youplay-select">
                                 <select>
-                                    <option>Silver 1</option>
-                                    <option>Silver 2</option>
-                                    <option>Silver 3</option>
-                                    <option>Silver 4</option>
-                                    <option>Silver Elite</option>
-                                    <option>Silver Elite Master</option>
-                                    <option>Gold Nova 1</option>
-                                    <option>Gold Nova 2</option>
-                                    <option>Gold Nova 3</option>
-                                    <option>Gold Nova Master</option>
-                                    <option>Master Guardian</option>
-                                    <option>Master Guardian 2</option>
-                                    <option>Master Guardian Elite</option>
-                                    <option>Distinguished Master Guardian</option>
-                                    <option>Legendary Eagle</option>
-                                    <option>Legendary Eagle Master</option>
-                                    <option>Supreme Master First Class</option>
+                                    <?php foreach ($listRank as $rank){?>
+                                        <option><?php echo $rank['rank'];?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>
@@ -81,23 +67,9 @@
                         <div class="col-sm-6">
                             <div class="youplay-select">
                                 <select>
-                                    <option>Silver 1</option>
-                                    <option selected>Silver 2</option>
-                                    <option>Silver 3</option>
-                                    <option>Silver 4</option>
-                                    <option>Silver Elite</option>
-                                    <option>Silver Elite Master</option>
-                                    <option>Gold Nova 1</option>
-                                    <option>Gold Nova 2</option>
-                                    <option>Gold Nova 3</option>
-                                    <option>Gold Nova Master</option>
-                                    <option>Master Guardian</option>
-                                    <option>Master Guardian 2</option>
-                                    <option>Master Guardian Elite</option>
-                                    <option>Distinguished Master Guardian</option>
-                                    <option>Legendary Eagle</option>
-                                    <option>Legendary Eagle Master</option>
-                                    <option>Supreme Master First Class</option>
+                                    <?php foreach ($listRank as $rank){?>
+                                        <option><?php echo $rank['rank'];?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>
@@ -110,7 +82,7 @@
                                 <select>
                                     <option selected>Auto</option>
                                     <?php foreach ($listBooster as $booster){?>
-                                        <option selected><?php echo $booster['ingame_nickname'];?></option>
+                                        <option><?php echo $booster['ingame_nickname'];?></option>
                                     <?php } ?>
                                 </select>
                             </div>
