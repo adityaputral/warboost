@@ -11,7 +11,7 @@
     <meta name="keywords" content="gaming, game, community, template, html, bootstrap, webpack">
     <meta name="author" content="Warboost Dev">
 
-    <link rel="icon" type="image/png" href="assets/images/dark/icon.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url();?>assets/images/dark/icon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -67,7 +67,7 @@
         <!-- Preloader -->
 <div class="page-preloader preloader-wrapp">
     
-        <img src="assets/images/logo-light.png" alt="">
+        <img src="<?php echo base_url();?>assets/images/logo-light.png" alt="">
     
     <div class="preloader"></div>
 </div>
@@ -93,7 +93,7 @@
             </button>
             
                 <a class="navbar-brand" href="<?php echo base_url(); ?>">
-                    <img src="assets/images/logo-light.png" alt="">
+                    <img src="<?php echo base_url();?>assets/images/logo-light.png" alt="">
                 </a>
             
         </div>
@@ -116,21 +116,21 @@
             </a>
             <div class="dropdown-menu" style="width: 320px;">
                 <ul role="menu">
-                    <li><a href="blog-1.html">CS:GO</a>
+                    <li><a href="<?php echo base_url();?>games/csgo">CS:GO</a>
                     </li>
-                    <li><a href="blog-2.html">Dota 2</a>
+                    <li><a href="<?php echo base_url();?>games/dota-2">Dota 2</a>
                     </li>
-                    <li><a href="blog-3.html">Overwatch</a>
+                    <li><a href="<?php echo base_url();?>games/overwatch">Overwatch</a>
                     </li>
                 </ul>
                 <!--
                         -->
                 <ul role="menu">
-                <li><a href="blog-3.html">Hearthstone</a>
+                <li><a href="<?php echo base_url();?>games/rocket-league">Rocket League</a>
                     </li>
-                    <li><a href="blog-post-2.html">League of Legends</a>
+                    <li><a href="<?php echo base_url();?>games/lol">League of Legends</a>
                     </li>
-                    <li><a href="blog-post-3.html">Apex Legends</a>
+                    <li><a href="<?php echo base_url();?>games/apex-legends">Apex Legends</a>
                     </li>
                 </ul>
             </div>
@@ -236,7 +236,7 @@
                                     <a href="#" class="angled-img">
                                         <div class="img">
                                             
-                                                <img src="assets/images/dark/game-bloodborne-500x375.jpg" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/dark/game-bloodborne-500x375.jpg" alt="">
                                                 
                                         </div>
                                     </a>
@@ -255,7 +255,7 @@
                                     <a href="#" class="angled-img">
                                         <div class="img">
                                             
-                                                <img src="assets/images/dark/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/dark/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt="">
                                             
                                         </div>
                                     </a>
@@ -324,7 +324,7 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Register</h4>
                 </div>
                 <div class="modal-body">
@@ -340,8 +340,13 @@
                                 <input type="text" name="user_email" />
                             </div>
 
+                            <p>Password:</p>
+                            <div class="youplay-input">
+                                <input type="password" name="user_password" />
+                            </div>
+
                             <p>
-                                <em>A password will be e-mailed to you.</em>
+                                <em>Confirmation link will be emailed to you.</em>
                             </p>
 
                             <button class="btn ml-3" name="submit">Register</button>
