@@ -104,7 +104,7 @@
                 <ul class="nav navbar-nav">
                     
         <li class=" dropdown dropdown-hover">
-            <a href="aboutUs" class role="button" aria-expanded="false">
+            <a href="<?php echo base_url();?>aboutUs" class role="button" aria-expanded="false">
                 About Us
                 <span class="label">information</span>
             </a>

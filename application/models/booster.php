@@ -18,5 +18,13 @@ class booster extends CI_Model{
         $aListBooster = $this->db->get('booster');
         return $aListBooster->result_array();
     }
+    
+    function funcGetDataBooster($username){
+        $this->db->join('status_booster', 'status_booster.id = booster.id_status');
+        $this->db->join('specialty', 'specialty.id_booster = booster.id');
+        $this->db->join('game', 'specialty.id_game = game.id');
+        $this->db->where('username', $username);
+        $aListBooster = $this->db->get('booster');
+        return $aListBooster->result_array()[0];
+    }
 }
-?>

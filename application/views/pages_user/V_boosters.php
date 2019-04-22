@@ -1,7 +1,7 @@
 <section class="youplay-banner banner-top youplay-banner-parallax xsmall">
 
     <div class="image" data-speed="0.4">
-        <img src="assets/images/banner-bg.jpg" alt="" class="jarallax-img">
+        <img src="<?php echo base_url(); ?>assets/images/banner-bg.jpg" alt="" class="jarallax-img">
     </div>
 
 
@@ -38,9 +38,9 @@
 
         <div class="isotope-list row vertical-gutter">
 
-        <?php foreach ($listBoosterCSGO as $booster) { ?>
+            <?php foreach ($listBoosterCSGO as $booster) { ?>
                 <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="CSGO">
-                    <a class="angled-img" href="store-product-1.html">
+                    <a class="angled-img" href="<?php echo base_url(); ?>boosters/<?php echo $booster['username']; ?>">
                         <div class="img img-offset">
                             <img src="<?php echo base_url(); ?>assets/images/profile/booster/<?php echo $booster['path_profilpic']; ?>" alt="">
                             <div class="badge bg-default">
@@ -84,10 +84,10 @@
             <?php } ?>
 
             <!-- /Single Product Block -->
-        
+
             <?php foreach ($listBoosterAPEX as $booster) { ?>
                 <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="APEX">
-                    <a class="angled-img" href="store-product-1.html">
+                    <a class="angled-img" href="<?php echo base_url(); ?>boosters/<?php echo $booster['username']; ?>">
                         <div class="img img-offset">
                             <img src="<?php echo base_url(); ?>assets/images/profile/booster/<?php echo $booster['path_profilpic']; ?>" alt="">
                             <div class="badge bg-default">
@@ -134,7 +134,7 @@
 
             <?php foreach ($listBoosterDOTA as $booster) { ?>
                 <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="DOTA">
-                    <a class="angled-img" href="store-product-1.html">
+                    <a class="angled-img" href="<?php echo base_url(); ?>boosters/<?php echo $booster['username']; ?>">
                         <div class="img img-offset">
                             <img src="<?php echo base_url(); ?>assets/images/profile/booster/<?php echo $booster['path_profilpic']; ?>" alt="">
                             <div class="badge bg-default">
@@ -183,7 +183,7 @@
 
             <?php foreach ($listBoosterLOL as $booster) { ?>
                 <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="LOL">
-                    <a class="angled-img" href="store-product-1.html">
+                    <a class="angled-img" href="<?php echo base_url(); ?>boosters/<?php echo $booster['username']; ?>">
                         <div class="img img-offset">
                             <img src="<?php echo base_url(); ?>assets/images/profile/booster/<?php echo $booster['path_profilpic']; ?>" alt="">
                             <div class="badge bg-default">
@@ -232,7 +232,7 @@
 
             <?php foreach ($listBoosterOW as $booster) { ?>
                 <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="OW">
-                    <a class="angled-img" href="store-product-1.html">
+                    <a class="angled-img" href="<?php echo base_url(); ?>boosters/<?php echo $booster['username']; ?>">
                         <div class="img img-offset">
                             <img src="<?php echo base_url(); ?>assets/images/profile/booster/<?php echo $booster['path_profilpic']; ?>" alt="">
                             <div class="badge bg-default">
@@ -281,7 +281,7 @@
 
             <?php foreach ($listBoosterRL as $booster) { ?>
                 <div class="item col-lg-4 col-md-6 col-xs-12" data-filters="RL">
-                    <a class="angled-img" href="store-product-1.html">
+                    <a class="angled-img" href="<?php echo base_url(); ?>boosters/<?php echo $booster['username']; ?>">
                         <div class="img img-offset">
                             <img src="<?php echo base_url(); ?>assets/images/profile/booster/<?php echo $booster['path_profilpic']; ?>" alt="">
                             <div class="badge bg-default">
