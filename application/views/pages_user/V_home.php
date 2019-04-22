@@ -76,7 +76,7 @@
 
 
     <!-- Specials -->
-    <h2 class="container h1">Booster <a href="#" class="btn pull-right">See More</a></h2>
+    <h2 class="container h1">Booster <a href="<?php echo base_url();?>boosters" class="btn pull-right">See More</a></h2>
     <!--
         Carousel
 
