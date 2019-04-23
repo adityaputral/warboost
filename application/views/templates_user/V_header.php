@@ -218,8 +218,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <i class="fa fa-shopping-cart"></i>
                         </a>
-                        <div class="dropdown-menu">
-                            <div class="row youplay-side-news">
+                        <div class="dropdown-menu" id="all-cart">
+                            <!-- <div class="row youplay-side-news">
                                 <div class="col-xs-3 col-md-4">
                                     <a href="#" class="angled-img">
                                         <div class="img">
@@ -236,33 +236,43 @@
                                         
                                     <span class="quantity">1 × <span class="amount">$50.00</span></span>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="row youplay-side-news">
-                                <div class="col-xs-3 col-md-4">
-                                    <a href="#" class="angled-img">
-                                        <div class="img">
-                                            
-                                                <img src="<?php echo base_url();?>assets/images/dark/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt="">
-                                            
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-9 col-md-8">
-                                    <a href="#" class="pull-right mr-10"><i class="fa fa-times"></i></a>
-                                    
-                                        <h4 class="ellipsis"><a href="#">Kingdoms of Amalur</a></h4>
+                            <?php if(count($listCart) > 0){ ?>
+                                <?php  $total_price=0.00; foreach ($listCart as $cart){?>
+                                <div class="row youplay-side-news">
+                                    <div class="col-xs-3 col-md-4">
+                                        <a href="#" class="angled-img">
+                                            <div class="img">
+                                                
+                                                    <img src="<?php echo base_url();?>assets/images/dark/game-bloodborne-500x375.jpg" alt="">
+                                                    
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-9 col-md-8">
+                                        <a href="<?php echo base_url();?>removeItem/<?php echo $cart['id_cart'];?>" class="pull-right mr-10"><i class="fa fa-times"></i></a>
                                         
-                                    <span class="quantity">1 × <span class="amount">$20.00</span></span>
+                                            <h4 class="ellipsis"><a href="#"><?php echo $cart['nama_boosting']?></a></h4>
+                                            
+                                        <span class="quantity"><span class="amount"><?php echo $cart['price'];?></span></span>
+                                    </div>
                                 </div>
-                            </div>
+                                <?php $total_price+=$cart['price']; } ?>
 
-                            <div class="ml-20 mr-20 pull-right"><strong>Subtotal:</strong> <span class="amount">$70.00</span></div>
+                                <div class="ml-20 mr-20 pull-right"><strong>Subtotal:</strong> <span class="amount">$<?php echo $total_price;?></span></div>
 
-                            <div class="btn-group pull-right m-15">
-                                <a href="#" class="btn btn-default btn-sm">View Cart</a>
-                                <a href="#" class="btn btn-default btn-sm">Checkout</a>
-                            </div>
+                                <div class="btn-group pull-right m-15">
+                                    <a href="<?php echo base_url();?>cart" class="btn btn-default btn-sm">View Cart</a>
+                                    <a href="#" class="btn btn-default btn-sm">Checkout</a>
+                                </div>
+                            <?php } else{?>
+                                <div class="row youplay-side-news">
+                                    <div class="col-xs-12 col-md-12">
+                                        <h4>There is no item in cart</h4>
+                                    </div>
+                                </div>
+                            <?php } ?>
                         </div>
                     </li>
                 

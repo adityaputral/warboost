@@ -30,7 +30,8 @@ class C_login extends CI_Controller {
                         'logged_in' => true
                     );
                     $this->session->set_userdata($userdata);
-                    redirect('/');
+                    $referred_from = $this->session->userdata('referred_from');
+                    redirect($referred_from, 'refresh');
                 }
                 else{
                     $this->session->set_flashdata('status', 'error');
@@ -58,6 +59,7 @@ class C_login extends CI_Controller {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('nama');
 		$this->session->unset_userdata('logged_in');
-		redirect('/');
+		$referred_from = $this->session->userdata('referred_from');
+        redirect($referred_from, 'refresh');
 	}
 }

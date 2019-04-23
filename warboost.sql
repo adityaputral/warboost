@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2019 at 01:12 PM
+-- Generation Time: Apr 23, 2019 at 08:34 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -68,6 +68,34 @@ CREATE TABLE `booster` (
 
 INSERT INTO `booster` (`id`, `username`, `password`, `nama`, `ingame_nickname`, `tanggal_lahir`, `nomor_hp`, `email`, `rating`, `id_status`, `path_profilpic`) VALUES
 (1, 'testing', 'testing', 'test', 'anonymous', '2018-07-08', '08123456789', 'testing@gmail.com', 4, 3, 'anonymous-test.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_booster` int(11) NOT NULL,
+  `id_game` int(11) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `id_tipe_boosting` int(11) NOT NULL,
+  `current_rank` int(11) NOT NULL,
+  `desired_rank` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`) VALUES
+(12, 1, 1, 5, '181.44', 11, 17, 32),
+(13, 1, 1, 5, '160.44', 11, 17, 31),
+(14, 1, 1, 5, '160.44', 11, 17, 31),
+(15, 1, 1, 5, '50.86', 11, 17, 24),
+(16, 1, 1, 5, '33.24', 11, 27, 29);
 
 -- --------------------------------------------------------
 
@@ -141,6 +169,59 @@ INSERT INTO `payment` (`id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rank`
+--
+
+CREATE TABLE `rank` (
+  `id_rank` int(11) NOT NULL,
+  `rank` varchar(50) NOT NULL,
+  `id_game` int(11) NOT NULL,
+  `base_price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rank`
+--
+
+INSERT INTO `rank` (`id_rank`, `rank`, `id_game`, `base_price`) VALUES
+(1, 'Silver 1', 0, '10.45'),
+(2, 'Silver 2', 0, '10.45'),
+(3, 'Silver 3', 0, '10.45'),
+(4, 'Silver 4', 0, '10.45'),
+(5, 'Silver Elite', 0, '10.45'),
+(6, 'Silver Elite Master', 0, '10.45'),
+(7, 'Gold Nova 1', 0, '10.45'),
+(8, 'Gold Nova 3', 0, '10.45'),
+(9, 'Gold Nova Master', 0, '10.45'),
+(10, 'Master Guardian', 0, '10.45'),
+(11, 'Master Guardian 2', 0, '10.45'),
+(12, 'Master Guardian Elite', 0, '10.45'),
+(13, 'Distinguished Master Guardian', 0, '10.45'),
+(14, 'Legendary Eagle', 0, '10.45'),
+(15, 'Legendary Eagle Master', 0, '10.45'),
+(16, 'Supreme Master First Class', 0, '21.31'),
+(17, 'Bronze 1', 5, '4.35'),
+(18, 'Bronze 2', 5, '4.35'),
+(19, 'Bronze 3', 5, '4.35'),
+(20, 'Silver 1', 5, '7.48'),
+(21, 'Silver 2', 5, '7.48'),
+(22, 'Silver 3', 5, '7.48'),
+(23, 'Gold 1', 5, '9.86'),
+(24, 'Gold 2', 5, '9.86'),
+(25, 'Gold 3', 5, '9.86'),
+(26, 'Platinum 1', 5, '12.24'),
+(27, 'Platinum 2', 5, '12.24'),
+(28, 'Platinum 3', 5, '12.24'),
+(29, 'Diamond 1', 5, '21.00'),
+(30, 'Diamond 2', 5, '21.00'),
+(31, 'Diamond 3', 5, '21.00'),
+(32, 'Champion 1', 5, '21.00'),
+(33, 'Champion 2', 5, '21.00'),
+(34, 'Champion 3', 5, '21.00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `review`
 --
 
@@ -162,6 +243,13 @@ CREATE TABLE `specialty` (
   `id_booster` int(11) NOT NULL,
   `id_game` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `specialty`
+--
+
+INSERT INTO `specialty` (`id_booster`, `id_game`) VALUES
+(1, 5);
 
 -- --------------------------------------------------------
 
@@ -202,16 +290,15 @@ CREATE TABLE `tipe_boosting` (
 INSERT INTO `tipe_boosting` (`id`, `nama_boosting`, `id_game`) VALUES
 (1, 'Apex Legends Win Boosting', 1),
 (2, 'Apex Legends Level Boost', 1),
-(3, 'Apex Legends Kill Bost', 1),
-(4, 'CS:GO Rank Boost', 0),
-(5, 'CS:GO Win Boost', 0),
-(6, 'Overwatch Rank Boost', 4),
-(7, 'Overwatch Level Boost', 4),
-(8, 'LoL Level Boost', 3),
-(9, 'LoL Win Boost', 3),
-(10, 'Dota 2 MMR Boost', 2),
-(11, 'Dota 2 Level Boost', 2),
-(12, 'Rocket League Rank Boost', 5);
+(3, 'CS:GO Rank Boost', 0),
+(4, 'CS:GO Win Boost', 0),
+(5, 'Overwatch Rank Boost', 4),
+(6, 'Overwatch Level Boost', 4),
+(7, 'LoL Level Boost', 3),
+(8, 'LoL Win Boost', 3),
+(9, 'Dota 2 MMR Boost', 2),
+(10, 'Dota 2 Level Boost', 2),
+(11, 'Rocket League Rank Boost', 5);
 
 -- --------------------------------------------------------
 
@@ -226,15 +313,17 @@ CREATE TABLE `transaksi` (
   `id_booster` int(11) NOT NULL,
   `id_game` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `id_tipe_boosting` int(11) NOT NULL
+  `id_tipe_boosting` int(11) NOT NULL,
+  `current_rank` int(11) NOT NULL,
+  `desired_rank` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`) VALUES
-(1, '2019-03-12', 1, 1, 1, 100000, 1);
+INSERT INTO `transaksi` (`id`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`) VALUES
+(2, '2019-04-27', 1, 1, 0, 5000, 3, 1, 9);
 
 -- --------------------------------------------------------
 
@@ -255,7 +344,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `nama`, `email`) VALUES
-(1, 'user', 'user', 'dadang', 'dadang@gmail.com');
+(1, 'user', 'user', 'dadang', 'dadang@gmail.com'),
+(2, 'tester', 'f5d1278e8109edd94e1e4197e04873b9', 'adit', 'akdmwka@gmail.com'),
+(3, 'admin11', 'admin11', 'Aditya', 'kwdamdwa@gmail.com'),
+(4, 'Adminis', 'adminis', 'Aditya k', 'kwdamdwa@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -294,6 +386,18 @@ ALTER TABLE `booster`
   ADD KEY `id_status` (`id_status`);
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_booster` (`id_booster`),
+  ADD KEY `id_game` (`id_game`),
+  ADD KEY `id_user` (`id_user`),
+  ADD KEY `id_tipe_boosting` (`id_tipe_boosting`),
+  ADD KEY `current_rank` (`current_rank`),
+  ADD KEY `desired_rank` (`desired_rank`);
+
+--
 -- Indexes for table `game`
 --
 ALTER TABLE `game`
@@ -311,6 +415,13 @@ ALTER TABLE `genre`
 --
 ALTER TABLE `payment`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rank`
+--
+ALTER TABLE `rank`
+  ADD PRIMARY KEY (`id_rank`),
+  ADD KEY `id_game` (`id_game`);
 
 --
 -- Indexes for table `review`
@@ -347,13 +458,16 @@ ALTER TABLE `transaksi`
   ADD KEY `id_booster` (`id_booster`),
   ADD KEY `id_game` (`id_game`),
   ADD KEY `id_user` (`id_user`),
-  ADD KEY `id_tipe_boosting` (`id_tipe_boosting`);
+  ADD KEY `id_tipe_boosting` (`id_tipe_boosting`),
+  ADD KEY `current_rank` (`current_rank`),
+  ADD KEY `desired_rank` (`desired_rank`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `voucher`
@@ -378,6 +492,12 @@ ALTER TABLE `booster`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
 -- AUTO_INCREMENT for table `game`
 --
 ALTER TABLE `game`
@@ -396,6 +516,12 @@ ALTER TABLE `payment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `rank`
+--
+ALTER TABLE `rank`
+  MODIFY `id_rank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
@@ -411,19 +537,19 @@ ALTER TABLE `status_booster`
 -- AUTO_INCREMENT for table `tipe_boosting`
 --
 ALTER TABLE `tipe_boosting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `voucher`
@@ -442,10 +568,27 @@ ALTER TABLE `booster`
   ADD CONSTRAINT `booster_ibfk_2` FOREIGN KEY (`id_status`) REFERENCES `status_booster` (`id`);
 
 --
+-- Constraints for table `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`id_booster`) REFERENCES `booster` (`id`),
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_game`) REFERENCES `game` (`id`),
+  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`id_tipe_boosting`) REFERENCES `tipe_boosting` (`id`),
+  ADD CONSTRAINT `cart_ibfk_4` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `cart_ibfk_5` FOREIGN KEY (`current_rank`) REFERENCES `rank` (`id_rank`),
+  ADD CONSTRAINT `cart_ibfk_6` FOREIGN KEY (`desired_rank`) REFERENCES `rank` (`id_rank`);
+
+--
 -- Constraints for table `game`
 --
 ALTER TABLE `game`
   ADD CONSTRAINT `game_ibfk_1` FOREIGN KEY (`id_genre`) REFERENCES `genre` (`id`);
+
+--
+-- Constraints for table `rank`
+--
+ALTER TABLE `rank`
+  ADD CONSTRAINT `rank_ibfk_1` FOREIGN KEY (`id_game`) REFERENCES `game` (`id`);
 
 --
 -- Constraints for table `review`
@@ -473,7 +616,9 @@ ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`id_booster`) REFERENCES `booster` (`id`),
   ADD CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`id_game`) REFERENCES `game` (`id`),
   ADD CONSTRAINT `transaksi_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `transaksi_ibfk_4` FOREIGN KEY (`id_tipe_boosting`) REFERENCES `tipe_boosting` (`id`);
+  ADD CONSTRAINT `transaksi_ibfk_4` FOREIGN KEY (`id_tipe_boosting`) REFERENCES `tipe_boosting` (`id`),
+  ADD CONSTRAINT `transaksi_ibfk_5` FOREIGN KEY (`current_rank`) REFERENCES `rank` (`id_rank`),
+  ADD CONSTRAINT `transaksi_ibfk_6` FOREIGN KEY (`desired_rank`) REFERENCES `rank` (`id_rank`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

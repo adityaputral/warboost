@@ -23,7 +23,8 @@ class C_register extends CI_Controller {
                 if($res){
                     $this->session->set_flashdata('status', 'success');
                     $this->session->set_flashdata('notification', 'Please check your email');
-                    redirect('/');
+                    $referred_from = $this->session->userdata('referred_from');
+                    redirect($referred_from, 'refresh');
                 }
                 else{
                     $this->session->set_flashdata('status', 'error');
