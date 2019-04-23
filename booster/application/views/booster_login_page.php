@@ -18,18 +18,18 @@
    <h2>Booster Login</h2>
    <p>Please enter your email and password</p>
    </div>
-    <form id="Login">
+    <form id="Login" method="post" action="<?php echo base_url();?>/booster/loginAttempt ">
 
         <div class="form-group">
 
 
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+            <input type="text" class="form-control" id="username" placeholder="username">
 
         </div>
 
         <div class="form-group">
 
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            <input type="password" class="form-control" id="password" placeholder="Password">
 
         </div>
         <div class="forgot">
