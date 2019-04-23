@@ -59,4 +59,4 @@ $route['boosters'] = 'C_boosters/index';
 $route['boosters/(:any)'] = 'C_boosters/funcDetailBoosters/$1';
 
 */
-$route['default_controller'] = 'B_home/index';
+$route['default_controller'] = 'B_login/index';
