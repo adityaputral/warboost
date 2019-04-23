@@ -48,8 +48,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
-*/
-$route['default_controller'] = 'C_home/index';
 $route['games/(:any)'] = 'C_pages/funcIndex/$1';
 $route['loginAttempt'] = 'C_login/funcLogin';
 $route['logout'] = 'C_login/logout';
@@ -59,3 +57,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['aboutUs'] = 'C_aboutUs/index';
 $route['boosters'] = 'C_boosters/index';
 $route['boosters/(:any)'] = 'C_boosters/funcDetailBoosters/$1';
+
+*/
+$route['default_controller'] = 'B_home/index';
