@@ -1,30 +1,21 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
 
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
 
 <html>
   <head>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/booster/css/login.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/booster/css/bootstrap.min.css">
+<script type = 'text/javascript' src = "<?php echo base_url();  ?>/booster/js/jquery.min.js"></script>
+<script type = 'text/javascript' src = "<?php echo base_url(); ?>/booster/js/bootstrap.min.js"></script>
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
   </head>
-<body id="LoginForm">
 <div class="container">
 <h1 class="form-heading">login Form</h1>
 <div class="login-form">
 <div class="main-div">
     <div class="panel">
-   <h2>Admin Login</h2>
+   <h2>Booster Login</h2>
    <p>Please enter your email and password</p>
    </div>
     <form id="Login">
@@ -48,10 +39,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </form>
     </div>
-<p class="botto-text"> Designed by Sunil Rajput</p>
 </div></div></div>
 
 
 </body>
 </html>
-
