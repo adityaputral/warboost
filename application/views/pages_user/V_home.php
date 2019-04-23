@@ -76,7 +76,7 @@
 
 
     <!-- Specials -->
-    <h2 class="container h1">Booster <a href="#" class="btn pull-right">See More</a></h2>
+    <h2 class="container h1">Booster <a href="<?php echo base_url();?>boosters" class="btn pull-right">See More</a></h2>
     <!--
         Carousel
 
@@ -98,7 +98,7 @@
     -->
     <div class="youplay-carousel">
         <?php foreach ($listBooster as $booster){?>
-            <a class="angled-img" href="store-product-1.html">
+            <a class="angled-img" href="<?php echo base_url();?>boosters/<?php echo $booster['username'];?>">
                 <div class="img img-offset">
                     <img src="<?php echo base_url();?>assets/images/profile/booster/<?php echo $booster['path_profilpic'];?>" alt="">
                     <div class="badge bg-default">
