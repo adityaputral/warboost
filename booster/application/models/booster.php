@@ -9,7 +9,7 @@ class booster extends CI_Model{
 		$this->db->select('id, username, nama');
 		$this->db->where('username', $username);
 		$this->db->where('password', $password);
-		$result = $this->db->get('user');
+		$result = $this->db->get('booster');
 		if($result->num_rows() == 1){
 			return $result->result();
 		}

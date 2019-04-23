@@ -13,7 +13,8 @@ class C_login extends CI_Controller {
 	$this->load->view('booster_login_page');
 	
 	}
-
+    
+    
 	public function funcLogin(){
         $username = $this->input->post('username');
         $password = $this->input->post('password');
@@ -36,24 +37,24 @@ class C_login extends CI_Controller {
                         'logged_in' => true
                     );
                     $this->session->set_userdata($userdata);
-                    redirect('/');
+                    redirect('default_controller');
                 }
                 else{
                     $this->session->set_flashdata('status', 'error');
                     $this->session->set_flashdata('notification', 'Server Probably Down');
-                    redirect('/');
+                    redirect('default_controller');
                 }
             }
             else{
                 $this->session->set_flashdata('status', 'error');
                 $this->session->set_flashdata('notification', 'Incorrect Password');
-                redirect('/');
+                redirect('default_controller');
             }
         }
         else{
             $this->session->set_flashdata('status', 'error');
             $this->session->set_flashdata('notification', 'Incorrect Username');
-            redirect('/');
+            redirect('default_controller');
         }
 
         
