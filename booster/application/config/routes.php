@@ -62,3 +62,6 @@ $route['boosters/(:any)'] = 'C_boosters/funcDetailBoosters/$1';
 $route['default_controller'] = 'C_login/index';
 $route['loginAttempt'] = 'C_login/funcLogin';
 $route['login']='C_boosterprofile/index';
+$route['setting']='C_boostersetting/index';
+$route['changestatus']='C_boostersetting/changestatus';
+$route['changepassword']='C_boostersetting/changepassword';

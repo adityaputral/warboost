@@ -50,5 +50,14 @@ class booster extends CI_Model{
 		$this->db->update('booster',$data);
 		echo 'status updated succesfully';
 	}
+	
+	function changePassword($id,$pass){
+		$data=[
+			'password' => $pass
+		];
+		$this->db->where('id',$id);
+		$this->db->update('booster',$data);
+		echo 'status updated succesfully';
+	}
 }
 ?>

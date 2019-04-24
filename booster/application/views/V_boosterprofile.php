@@ -11,7 +11,7 @@
         <ul>
           <li><a href="user-activity.html">Order</a></li>
           <li class="active"><a href="user-profile.html">Profile</a></li>
-          <li><a href="user-settings.html">Settings</a></li>
+          <li><a href="<?php echo base_url();?>booster/setting">Settings</a></li>
 
         </ul>
       </div>
