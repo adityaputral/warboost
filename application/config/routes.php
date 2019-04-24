@@ -65,4 +65,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['aboutUs'] = 'C_aboutUs/index';
 $route['boosters'] = 'C_boosters/index';
 $route['boosters/(:any)'] = 'C_boosters/funcDetailBoosters/$1';
-$route['users/(:any)'] = 'C_users/index/$1';
+$route['users/(:any)'] = 'C_users/pageSelect/$1';

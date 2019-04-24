@@ -153,15 +153,15 @@
                     
         <?php if($this->session->userdata('logged_in')){ ?>
             <li class=" dropdown dropdown-hover">
-            <a href="user-activity.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <a href="<?php echo base_url();?>users/activity" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 <?php echo $this->session->userdata('nama');?>
-                <span class="badge bg-default">8</span>
+                <span class="badge bg-default">2</span>
                 <span class="caret"></span>
                 <span class="label">user</span>
             </a><div class="dropdown-menu"><ul role="menu">
                             
             <li>
-                <a href="user-activity.html">
+                <a href="<?php echo base_url();?>users/activity">
                     Activity
                     
                     
@@ -169,7 +169,7 @@
                 </a>
             </li>
             <li>
-                <a href="user-profile.html">
+                <a href="<?php echo base_url();?>users/profile">
                     Profile
                     
                     
@@ -177,15 +177,7 @@
                 </a>
             </li>
             <li>
-                <a href="user-messages.html">
-                    Messages
-                    <span class="badge bg-default">8</span>
-                    
-                    
-                </a>
-            </li>
-            <li>
-                <a href="user-settings.html">
+                <a href="<?php echo base_url();?>users/settings">
                     Settings
                     
                     
