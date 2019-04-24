@@ -50,5 +50,25 @@ class booster extends CI_Model{
 		$this->db->update('booster',$data);
 		echo 'status updated succesfully';
 	}
+
+	function getOrder(){
+		$id = $this->session->userdata('id');
+
+		$this->db->select('*');
+		$this->db->where('id_booster', $id);
+		$this->db->from('transaksi');
+		$this->db->join('user', 'user.id = transaksi.id_user', 'left');
+		$this->db->join('game', 'game.id = transaksi.id_game', 'left');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
+	function getOrderDetails($id){
+		$this->db->select('*');
+		$this->db->where('id', $id);
+		$this->db->from('transaksi');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }
 ?>

@@ -9,7 +9,7 @@
     <div class="youplay-user-navigation">
       <div class="container">
         <ul>
-          <li><a href="user-activity.html">Order</a></li>
+          <li><a href="order">Order</a></li>
           <li class="active"><a href="user-profile.html">Profile</a></li>
           <li><a href="user-settings.html">Settings</a></li>
 
