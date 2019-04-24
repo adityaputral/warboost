@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_boosterlogin extends CI_Controller {
+class C_boosterprofile extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,6 +21,8 @@ class C_boosterlogin extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('url');
+		$this->load->view('templates_booster/V_header');
 		$this->load->view('V_boosterprofile');
+		$this->load->view('templates_booster/V_footer');
 	}
 }

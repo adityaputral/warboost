@@ -61,4 +61,4 @@ $route['boosters/(:any)'] = 'C_boosters/funcDetailBoosters/$1';
 */
 $route['default_controller'] = 'C_login/index';
 $route['loginAttempt'] = 'C_login/funcLogin';
-$route['login']='C_boosterlogin/index';
+$route['login']='C_boosterprofile/index';
