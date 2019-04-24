@@ -29,32 +29,42 @@ class C_login extends CI_Controller {
                         $id =  $row->id;
                         $username = $row->username;
                         $nama = $row->nama;
+                        $nickname= $row->ingame_nickname;
+                        $email= $row->email;
+                        $rating= $row->rating;
+                        $status= $row->id_status;
+                        $about=$row->about_me;
                     }
                     $userdata = array(
                         'id' => $id,
                         'username' => $username,
                         'nama' => $nama,
-                        'logged_in' => true
+                        'logged_in' => true,
+                        'nickname' => $nickname,
+                        'email' => $email,
+                        'rating' => $rating,
+                        'status' => $status,
+                        'about' => $about
                     );
                     $this->session->set_userdata($userdata);
-                    redirect('default_controller');
+                    redirect('booster/login');
                 }
                 else{
                     $this->session->set_flashdata('status', 'error');
                     $this->session->set_flashdata('notification', 'Server Probably Down');
-                    redirect('default_controller');
+                    redirect('booster/login');
                 }
             }
             else{
                 $this->session->set_flashdata('status', 'error');
                 $this->session->set_flashdata('notification', 'Incorrect Password');
-                redirect('default_controller');
+                redirect('booster/login');
             }
         }
         else{
             $this->session->set_flashdata('status', 'error');
             $this->session->set_flashdata('notification', 'Incorrect Username');
-            redirect('default_controller');
+            redirect('booster/login');
         }
 
         
