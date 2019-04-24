@@ -58,9 +58,9 @@ class user extends CI_Model{
 		}
 	}
 
-	function getUsername($username){
-			$item = "username";
-		$this->db->select('username');
+	function getEmail($username){
+		$item = "email";
+		$this->db->select('email');
 		$this->db->where('username', $username);
 		$result = $this->db->get('user');
 		if($result->num_rows() == 1){
@@ -69,5 +69,5 @@ class user extends CI_Model{
 		else {
 			return false;
 		}
-	}
+  }
 }

@@ -153,15 +153,15 @@
                     
         <?php if($this->session->userdata('logged_in')){ ?>
             <li class=" dropdown dropdown-hover">
-            <a href="user-activity.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <a href="<?php echo base_url();?>users/activity" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 <?php echo $this->session->userdata('nama');?>
-                <span class="badge bg-default">8</span>
+                <span class="badge bg-default">2</span>
                 <span class="caret"></span>
                 <span class="label">user</span>
             </a><div class="dropdown-menu"><ul role="menu">
                             
             <li>
-                <a href="user-activity.html">
+                <a href="<?php echo base_url();?>users/activity">
                     Activity
                     
                     
@@ -169,7 +169,7 @@
                 </a>
             </li>
             <li>
-                <a href="user-profile.html">
+                <a href="<?php echo base_url();?>users/profile">
                     Profile
                     
                     
@@ -177,15 +177,7 @@
                 </a>
             </li>
             <li>
-                <a href="user-messages.html">
-                    Messages
-                    <span class="badge bg-default">8</span>
-                    
-                    
-                </a>
-            </li>
-            <li>
-                <a href="user-settings.html">
+                <a href="<?php echo base_url();?>users/settings">
                     Settings
                     
                     
@@ -216,28 +208,9 @@
                 
                     <li class="dropdown dropdown-hover dropdown-cart">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-shopping-cart"></i><span class="badge bg-default"><?php echo count($listCart)?></span>
                         </a>
                         <div class="dropdown-menu" id="all-cart">
-                            <!-- <div class="row youplay-side-news">
-                                <div class="col-xs-3 col-md-4">
-                                    <a href="#" class="angled-img">
-                                        <div class="img">
-                                            
-                                                <img src="<?php echo base_url();?>assets/images/dark/game-bloodborne-500x375.jpg" alt="">
-                                                
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-9 col-md-8">
-                                    <a href="#" class="pull-right mr-10"><i class="fa fa-times"></i></a>
-                                    
-                                        <h4 class="ellipsis"><a href="#">Bloodborne</a></h4>
-                                        
-                                    <span class="quantity">1 × <span class="amount">$50.00</span></span>
-                                </div>
-                            </div> -->
-
                             <?php if(count($listCart) > 0){ ?>
                                 <?php  $total_price=0.00; foreach ($listCart as $cart){?>
                                 <div class="row youplay-side-news">

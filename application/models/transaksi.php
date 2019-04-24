@@ -14,5 +14,30 @@ class transaksi extends CI_Model{
         $aList5LatestTransaksi = $this->db->get('transaksi',5);
         return $aList5LatestTransaksi->result_array();
     }
+
+    function funcOrder($tanggal, $id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank,$id_payment, $username_akun,$password_akun, $notes){
+        $data = array(
+            'tanggal' => $tanggal,
+            'id_user' => $id_user, 
+            'id_booster' => $id_booster, 
+            'id_game' => $id_game,
+            'price' => $price, 
+            'id_tipe_boosting' => $id_tipe_boosting, 
+            'current_rank' => $current_rank, 
+            'desired_rank' => $desired_rank,
+            'id_payment' => $id_payment,
+            'username_akun' => $username_akun,
+            'password_akun' => $password_akun,
+            'notes' => $notes
+        );
+        $result = $this->db->insert('transaksi', $data);
+
+        if($result){
+			return true;
+		}
+		else{
+			return false;
+		}
+    }
 }
 ?>

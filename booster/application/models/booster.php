@@ -69,6 +69,14 @@ class booster extends CI_Model{
 		$this->db->from('transaksi');
 		$query = $this->db->get();
 		return $query->result_array();
+
+	function changePassword($id,$pass){
+		$data=[
+			'password' => $pass
+		];
+		$this->db->where('id',$id);
+		$this->db->update('booster',$data);
+		echo 'status updated succesfully';
 	}
 }
 ?>

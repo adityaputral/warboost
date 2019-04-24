@@ -64,3 +64,6 @@ $route['loginAttempt'] = 'C_login/funcLogin';
 $route['login']='C_boosterprofile/index';
 $route['order']='C_boosterorder/index';
 $route['order/(:any)']='C_boosterorder/orderDetails/$id';
+$route['setting']='C_boostersetting/index';
+$route['changestatus']='C_boostersetting/changestatus';
+$route['changepassword']='C_boostersetting/changepassword';

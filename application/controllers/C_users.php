@@ -9,15 +9,27 @@ class C_users extends CI_Controller
   parent::__construct();
  }
 
- public function index($username){
+ public function pageSelect($sPage){
 
   $this->load->model('user');
 
-  $aData['username'] = $this->user->getUsername($username);
+  $emailData['email'] = $this->user->getEmail($this->session->userdata('username'));
 
-  $this->load->view('templates_user/V_header');
- $this->load->view('pages_user/V_users', $aData);
-  $this->load->view('templates_user/V_footer');
+  if($sPage === 'activity'){
+    $this->load->view('templates_user/V_header');
+    $this->load->view('pages_user/users/V_users_activity');
+    $this->load->view('templates_user/V_footer');
+  }
+  else if($sPage === 'profile'){
+    $this->load->view('templates_user/V_header');
+    $this->load->view('pages_user/users/V_users_profile', $emailData);
+    $this->load->view('templates_user/V_footer');
+  }
+  else if($sPage === 'settings'){
+    $this->load->view('templates_user/V_header');
+    $this->load->view('pages_user/users/V_users_settings', $emailData);
+    $this->load->view('templates_user/V_footer');
+  }
  }
 
 //  public function funcDetailUsers($username)
