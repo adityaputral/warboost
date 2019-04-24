@@ -31,7 +31,8 @@ class C_pages extends CI_Controller {
 		else if($sPage === 'overwatch'){
 			$aData['listRank'] = $this->rank->funcGetListRank(4);
 			$aData['listBooster'] = $this->booster->funcGetAvailableBooster(4);
-		}else if($sPage === 'rocket-league'){
+		}
+		else if($sPage === 'rocket-league'){
 			$aData['listRank'] = $this->rank->funcGetListRank(5);
 			$aData['listBooster'] = $this->booster->funcGetAvailableBooster(5);
 		}

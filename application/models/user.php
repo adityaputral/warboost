@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class user extends CI_Model{
 	public function __construct(){
     	parent::__construct();
-    }
+  }
 
-    function loginverify($username, $password){
+  function loginverify($username, $password){
 		$this->db->select('id, username, nama');
 		$this->db->where('username', $username);
 		$this->db->where('password', $password);
@@ -16,9 +16,9 @@ class user extends CI_Model{
 		else {
 			return false;
 		}
-    }
+  }
     
-    function checkUsername($username){
+  function checkUsername($username){
 		$this->db->where('username', $username);
 		$result = $this->db->get('user');
 		if($result->num_rows() == 1){
@@ -27,9 +27,9 @@ class user extends CI_Model{
 		else {
 			return false;
 		}
-    }
+  }
     
-    function getPassword($username){
+  function getPassword($username){
 		$item = "password";
 		$this->db->select('password');
 		$this->db->where('username', $username);
@@ -40,9 +40,9 @@ class user extends CI_Model{
 		else {
 			return false;
 		}
-    }
+  }
     
-    function addUser($username, $password, $nama, $email){
+  function addUser($username, $password, $nama, $email){
 		$data = array(
         	'username' => $username,
         	'password' => $password,
@@ -54,6 +54,19 @@ class user extends CI_Model{
 			return true;
 		}
 		else{
+			return false;
+		}
+	}
+
+	function getUsername($username){
+			$item = "username";
+		$this->db->select('username');
+		$this->db->where('username', $username);
+		$result = $this->db->get('user');
+		if($result->num_rows() == 1){
+			return $result->row(0)->$item;
+		} 
+		else {
 			return false;
 		}
 	}
