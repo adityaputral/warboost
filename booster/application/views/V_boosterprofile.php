@@ -9,8 +9,8 @@
     <div class="youplay-user-navigation">
       <div class="container">
         <ul>
-          <li><a href="order">Order</a></li>
-          <li class="active"><a href="user-profile.html">Profile</a></li>
+          <li><a href="<?php echo base_url();?>booster/order">Order</a></li>
+          <li class="active"><a href="<?php echo base_url();?>booster/login">Profile</a></li>
           <li><a href="<?php echo base_url();?>booster/setting">Settings</a></li>
 
         </ul>

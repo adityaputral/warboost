@@ -8,9 +8,9 @@
     <div class="youplay-user-navigation">
       <div class="container">
         <ul>
-          <li class="active"><a href="order">Order</a></li>
-          <li><a href="login">Profile</a></li>
-          <li><a href="#">Settings</a></li>
+          <li class="active"><a href="<?php echo base_url();?>booster/order">Order</a></li>
+          <li><a href="<?php echo base_url();?>booster/login">Profile</a></li>
+          <li><a href="<?php echo base_url();?>booster/setting">Settings</a></li>
         </ul>
       </div>
     </div>
@@ -68,7 +68,6 @@
             <th>Username</th>
             <th>Rank sekarang</th>
             <th>Rank yang diinginkan</th>
-            <th>Rank yang diinginkan</th>
             <th>Status</th>
             <th></th>
           </tr>
@@ -84,9 +83,8 @@
               <td><?php echo $order['nama_game']; ?></td>
               <td><?php echo $order['current_rank'] ?></td>
               <td><?php echo $order['desired_rank'] ?></td>
-              <td><?php echo $order['desired_rank'] ?></td>
-
-              <th><a href= <?php echo $order['id']; ?>>Details</a></th>
+              <td></td>
+              <th><a href= <?php echo "order/".$order['id']; ?>>Details</a></th>
             </tr>
             <?php
             $i += 1;

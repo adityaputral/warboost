@@ -29,6 +29,13 @@ class booster extends CI_Model{
 		}
 	}
 
+	function getListStatus(){
+		$this->db->select('*');
+		$this->db->from('status_booster');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
 	function getPassword($username){
 		$item = "password";
 		$this->db->select('password');
@@ -69,12 +76,13 @@ class booster extends CI_Model{
 		$this->db->from('transaksi');
 		$query = $this->db->get();
 		return $query->result_array();
+	}
 
-	function changePassword($id,$pass){
+	function changePassword($username, $pass){
 		$data=[
 			'password' => $pass
 		];
-		$this->db->where('id',$id);
+		$this->db->where('username',$username);
 		$this->db->update('booster',$data);
 		echo 'status updated succesfully';
 	}
