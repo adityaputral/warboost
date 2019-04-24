@@ -32,11 +32,15 @@ class C_boosters extends CI_Controller
 
 	public function funcDetailBoosters($username)
 	{
+		$this->load->model('cart');
 		$this->load->model('booster');
 
 		$aData['dataBooster'] = $this->booster->funcGetDataBooster($username);
+		$aCart['listCart'] = $this->cart->funcGetUsersCart($this->session->userdata('id'));
 
-		$this->load->view('templates_user/V_header');
+		$this->session->set_userdata('referred_from', current_url());
+
+		$this->load->view('templates_user/V_header', $aCart);
 		$this->load->view('pages_user/V_detailBooster', $aData);
 		$this->load->view('templates_user/V_footer');
 	}

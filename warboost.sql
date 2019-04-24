@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2019 at 08:34 AM
+-- Generation Time: Apr 24, 2019 at 10:43 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -59,15 +59,36 @@ CREATE TABLE `booster` (
   `email` varchar(100) NOT NULL,
   `rating` double NOT NULL,
   `id_status` int(11) NOT NULL,
-  `path_profilpic` varchar(255) NOT NULL
+  `path_profilpic` varchar(255) NOT NULL,
+  `about_me` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `booster`
 --
 
-INSERT INTO `booster` (`id`, `username`, `password`, `nama`, `ingame_nickname`, `tanggal_lahir`, `nomor_hp`, `email`, `rating`, `id_status`, `path_profilpic`) VALUES
-(1, 'testing', 'testing', 'test', 'anonymous', '2018-07-08', '08123456789', 'testing@gmail.com', 4, 3, 'anonymous-test.jpg');
+INSERT INTO `booster` (`id`, `username`, `password`, `nama`, `ingame_nickname`, `tanggal_lahir`, `nomor_hp`, `email`, `rating`, `id_status`, `path_profilpic`, `about_me`) VALUES
+(1, 'testing', 'testing', 'test', 'anonymous', '2018-07-08', '08123456789', 'testing@gmail.com', 4, 3, 'anonymous-test.jpg', ''),
+(2, 'deaslea1', 'T8YiLr', 'Delphinia Easlea', 'Delphinia', '2018-11-30', '8562087854', 'deaslea1@hud.gov', 2, 1, 'anonymous-test.jpg', ''),
+(3, 'kflade2', '2ekzeo3pC', 'Kermit Flade', 'Kermit', '2018-10-28', '6337574264', 'kflade2@phoca.cz', 5, 1, 'anonymous-test.jpg', ''),
+(4, 'anethercott3', 'wcLqwgpW', 'Ardella Nethercott', 'Ardella', '2018-12-04', '8651572862', 'anethercott3@macromedia.com', 5, 2, 'anonymous-test.jpg', ''),
+(5, 'emaddern4', 'Xg2cak2941X', 'Edy Maddern', 'Edy', '2018-09-22', '2305319781', 'emaddern4@com.com', 2, 2, 'anonymous-test.jpg', ''),
+(6, 'lnunn5', 'tduDCLyra', 'Laina Nunn', 'Laina', '2019-02-05', '8886489082', 'lnunn5@quantcast.com', 4, 1, 'anonymous-test.jpg', ''),
+(7, 'fgrocock6', 'OrujQAZx0', 'Farrand Grocock', 'Farrand', '2018-04-25', '3743512207', 'fgrocock6@quantcast.com', 2, 3, 'anonymous-test.jpg', ''),
+(8, 'mstiggers7', 'GCZAVAy8h', 'Maddy Stiggers', 'Maddy', '2019-03-20', '5321405399', 'mstiggers7@squidoo.com', 1, 2, 'anonymous-test.jpg', ''),
+(9, 'whulcoop8', 'kVE6BHJTZ', 'Wenona Hulcoop', 'Wenona', '2018-08-20', '5062978637', 'whulcoop8@goodreads.com', 4, 1, 'anonymous-test.jpg', ''),
+(10, 'abeetlestone9', '4sZLYHgx2y', 'Althea Beetlestone', 'Althea', '2019-02-12', '8608650364', 'abeetlestone9@joomla.org', 1, 3, 'anonymous-test.jpg', ''),
+(11, 'dwrighta', 'Vj4DBSy7WrkG', 'Donetta Wright', 'Donetta', '2018-06-05', '1538276683', 'dwrighta@topsy.com', 5, 3, 'anonymous-test.jpg', ''),
+(12, 'tyardyb', 'H1bhonqydnC', 'Teresita Yardy', 'Teresita', '2018-09-12', '9833379703', 'tyardyb@typepad.com', 1, 2, 'anonymous-test.jpg', ''),
+(13, 'erennisonc', 'pELH2rnn87Q', 'Evvy Rennison', 'Evvy', '2018-12-17', '4498769105', 'erennisonc@uiuc.edu', 2, 1, 'anonymous-test.jpg', ''),
+(14, 'vguppeyd', 'ziwQLZ7qA', 'Vite Guppey', 'Vite', '2018-05-10', '8135431678', 'vguppeyd@auda.org.au', 4, 3, 'anonymous-test.jpg', ''),
+(15, 'qcotmoree', '2FWry2b', 'Quintus Cotmore', 'Quintus', '2019-02-21', '3796768280', 'qcotmoree@npr.org', 1, 1, 'anonymous-test.jpg', ''),
+(16, 'mgowersf', 'kCNDhHFlDhRW', 'Matelda Gowers', 'Matelda', '2019-02-19', '4963689579', 'mgowersf@sina.com.cn', 4, 1, 'anonymous-test.jpg', ''),
+(17, 'bhubnerg', 's7cq6vzYf', 'Buffy Hubner', 'Buffy', '2019-02-12', '4857476720', 'bhubnerg@sfgate.com', 5, 1, 'anonymous-test.jpg', ''),
+(18, 'warondelh', 'f9Upixbpp', 'Wilbur Arondel', 'Wilbur', '2018-06-02', '9864392552', 'warondelh@chronoengine.com', 4, 1, 'anonymous-test.jpg', ''),
+(19, 'ajandeli', 'JRZa0yNR9m4', 'Art Jandel', 'Art', '2018-05-13', '8123032415', 'ajandeli@sakura.ne.jp', 1, 3, 'anonymous-test.jpg', ''),
+(20, 'lbarnardj', 'rTzXPXdHD0', 'Linnie Barnard', 'Linnie', '2019-01-31', '3781587177', 'lbarnardj@naver.com', 3, 2, 'anonymous-test.jpg', ''),
+(21, 'kmarchantk', 'zoXVkJ', 'Krisha Marchant', 'Krisha', '2018-08-01', '2316027768', 'kmarchantk@people.com.cn', 3, 2, 'anonymous-test.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -76,7 +97,7 @@ INSERT INTO `booster` (`id`, `username`, `password`, `nama`, `ingame_nickname`, 
 --
 
 CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
+  `id_cart` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_booster` int(11) NOT NULL,
   `id_game` int(11) NOT NULL,
@@ -90,12 +111,8 @@ CREATE TABLE `cart` (
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`) VALUES
-(12, 1, 1, 5, '181.44', 11, 17, 32),
-(13, 1, 1, 5, '160.44', 11, 17, 31),
-(14, 1, 1, 5, '160.44', 11, 17, 31),
-(15, 1, 1, 5, '50.86', 11, 17, 24),
-(16, 1, 1, 5, '33.24', 11, 27, 29);
+INSERT INTO `cart` (`id_cart`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`) VALUES
+(26, 1, 1, 5, '118.44', 11, 17, 29);
 
 -- --------------------------------------------------------
 
@@ -152,19 +169,32 @@ INSERT INTO `genre` (`id`, `nama`) VALUES
 
 CREATE TABLE `payment` (
   `id` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL
+  `nama_payment` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payment`
 --
 
-INSERT INTO `payment` (`id`, `nama`) VALUES
+INSERT INTO `payment` (`id`, `nama_payment`) VALUES
 (1, 'BRI'),
 (2, 'Paypal'),
 (3, 'Western Union'),
 (4, 'BCA'),
 (5, 'Credit Card');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `progress`
+--
+
+CREATE TABLE `progress` (
+  `id_progress` int(11) NOT NULL,
+  `id_status` int(11) NOT NULL,
+  `notes` varchar(255) NOT NULL,
+  `id_transaksi` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -274,6 +304,26 @@ INSERT INTO `status_booster` (`id`, `keterangan`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `status_progress_boosting`
+--
+
+CREATE TABLE `status_progress_boosting` (
+  `id` int(11) NOT NULL,
+  `keterangan` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `status_progress_boosting`
+--
+
+INSERT INTO `status_progress_boosting` (`id`, `keterangan`) VALUES
+(1, 'New'),
+(2, 'On Progress'),
+(3, 'Finished');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tipe_boosting`
 --
 
@@ -312,18 +362,23 @@ CREATE TABLE `transaksi` (
   `id_user` int(11) NOT NULL,
   `id_booster` int(11) NOT NULL,
   `id_game` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
   `id_tipe_boosting` int(11) NOT NULL,
   `current_rank` int(11) NOT NULL,
-  `desired_rank` int(11) NOT NULL
+  `desired_rank` int(11) NOT NULL,
+  `id_payment` int(11) NOT NULL,
+  `username_akun` varchar(255) NOT NULL,
+  `password_akun` varchar(50) NOT NULL,
+  `notes` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`) VALUES
-(2, '2019-04-27', 1, 1, 0, 5000, 3, 1, 9);
+INSERT INTO `transaksi` (`id`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`, `id_payment`, `username_akun`, `password_akun`, `notes`) VALUES
+(6, '2019-04-24', 4, 1, 5, '60.72', 11, 17, 25, 2, 'dnawkndkw', 'kdamkmdwak', 'dakwmdkam'),
+(7, '2019-04-24', 4, 1, 5, '60.72', 11, 17, 25, 2, 'dnawkndkw', 'kdamkmdwak', 'dakwmdkam');
 
 -- --------------------------------------------------------
 
@@ -347,7 +402,8 @@ INSERT INTO `user` (`id`, `username`, `password`, `nama`, `email`) VALUES
 (1, 'user', 'user', 'dadang', 'dadang@gmail.com'),
 (2, 'tester', 'f5d1278e8109edd94e1e4197e04873b9', 'adit', 'akdmwka@gmail.com'),
 (3, 'admin11', 'admin11', 'Aditya', 'kwdamdwa@gmail.com'),
-(4, 'Adminis', 'adminis', 'Aditya k', 'kwdamdwa@gmail.com');
+(4, 'Adminis', 'adminis', 'Aditya k', 'kwdamdwa@gmail.com'),
+(5, 'teeess', 'tes', 'tes', 'teawa@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -389,7 +445,7 @@ ALTER TABLE `booster`
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_cart`),
   ADD KEY `id_booster` (`id_booster`),
   ADD KEY `id_game` (`id_game`),
   ADD KEY `id_user` (`id_user`),
@@ -415,6 +471,14 @@ ALTER TABLE `genre`
 --
 ALTER TABLE `payment`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `progress`
+--
+ALTER TABLE `progress`
+  ADD PRIMARY KEY (`id_progress`),
+  ADD KEY `id_status` (`id_status`),
+  ADD KEY `id_transaksi` (`id_transaksi`);
 
 --
 -- Indexes for table `rank`
@@ -444,6 +508,12 @@ ALTER TABLE `status_booster`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `status_progress_boosting`
+--
+ALTER TABLE `status_progress_boosting`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tipe_boosting`
 --
 ALTER TABLE `tipe_boosting`
@@ -460,7 +530,8 @@ ALTER TABLE `transaksi`
   ADD KEY `id_user` (`id_user`),
   ADD KEY `id_tipe_boosting` (`id_tipe_boosting`),
   ADD KEY `current_rank` (`current_rank`),
-  ADD KEY `desired_rank` (`desired_rank`);
+  ADD KEY `desired_rank` (`desired_rank`),
+  ADD KEY `id_payment` (`id_payment`);
 
 --
 -- Indexes for table `user`
@@ -489,13 +560,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `booster`
 --
 ALTER TABLE `booster`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `game`
@@ -514,6 +585,12 @@ ALTER TABLE `genre`
 --
 ALTER TABLE `payment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `progress`
+--
+ALTER TABLE `progress`
+  MODIFY `id_progress` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `rank`
@@ -543,13 +620,13 @@ ALTER TABLE `tipe_boosting`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `voucher`
@@ -585,6 +662,13 @@ ALTER TABLE `game`
   ADD CONSTRAINT `game_ibfk_1` FOREIGN KEY (`id_genre`) REFERENCES `genre` (`id`);
 
 --
+-- Constraints for table `progress`
+--
+ALTER TABLE `progress`
+  ADD CONSTRAINT `progress_ibfk_2` FOREIGN KEY (`id_status`) REFERENCES `status_progress_boosting` (`id`),
+  ADD CONSTRAINT `progress_ibfk_3` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id`);
+
+--
 -- Constraints for table `rank`
 --
 ALTER TABLE `rank`
@@ -618,7 +702,8 @@ ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `transaksi_ibfk_4` FOREIGN KEY (`id_tipe_boosting`) REFERENCES `tipe_boosting` (`id`),
   ADD CONSTRAINT `transaksi_ibfk_5` FOREIGN KEY (`current_rank`) REFERENCES `rank` (`id_rank`),
-  ADD CONSTRAINT `transaksi_ibfk_6` FOREIGN KEY (`desired_rank`) REFERENCES `rank` (`id_rank`);
+  ADD CONSTRAINT `transaksi_ibfk_6` FOREIGN KEY (`desired_rank`) REFERENCES `rank` (`id_rank`),
+  ADD CONSTRAINT `transaksi_ibfk_7` FOREIGN KEY (`id_payment`) REFERENCES `payment` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

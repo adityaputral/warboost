@@ -74,7 +74,7 @@
                     Total: <strong>$<?php echo $total_price; ?></strong>
                 </div>
                 <div class="align-right">
-                    <a href="checkout.html" class="btn btn-lg">Proceed to Checkout</a>
+                    <a href="<?php echo base_url(); ?>checkout" class="btn btn-lg">Proceed to Checkout</a>
                 </div>
             <?php } else { ?>
                 <h1> There is no item in cart.</h1>

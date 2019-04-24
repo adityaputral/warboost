@@ -216,28 +216,9 @@
                 
                     <li class="dropdown dropdown-hover dropdown-cart">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-shopping-cart"></i><span class="badge bg-default"><?php echo count($listCart)?></span>
                         </a>
                         <div class="dropdown-menu" id="all-cart">
-                            <!-- <div class="row youplay-side-news">
-                                <div class="col-xs-3 col-md-4">
-                                    <a href="#" class="angled-img">
-                                        <div class="img">
-                                            
-                                                <img src="<?php echo base_url();?>assets/images/dark/game-bloodborne-500x375.jpg" alt="">
-                                                
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-9 col-md-8">
-                                    <a href="#" class="pull-right mr-10"><i class="fa fa-times"></i></a>
-                                    
-                                        <h4 class="ellipsis"><a href="#">Bloodborne</a></h4>
-                                        
-                                    <span class="quantity">1 × <span class="amount">$50.00</span></span>
-                                </div>
-                            </div> -->
-
                             <?php if(count($listCart) > 0){ ?>
                                 <?php  $total_price=0.00; foreach ($listCart as $cart){?>
                                 <div class="row youplay-side-news">
