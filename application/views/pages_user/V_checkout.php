@@ -12,7 +12,7 @@
     <section class="youplay-banner banner-top youplay-banner-parallax xsmall">
 
         <div class="image" data-speed="0.4">
-            <img src="assets/images/dark/banner-blog-bg.jpg" alt="" class="jarallax-img">
+            <img src="assets/images/banner-bg.jpg" alt="" class="jarallax-img">
         </div>
 
 
@@ -89,7 +89,7 @@
 
                 <div class="align-right h3 mr-20 mb-20">
 
-                    Total: <strong>$<input type="text" id="total_price" name="total_price" style="color:white;border: none;background: transparent;width:8%" value="<?php echo $total_price; ?>" readonly></strong>
+                    Total: <strong>$<input type="text" id="total_price" name="total_price" style="color:white;border: none;background: transparent;width:12%" value="<?php echo $total_price; ?>" readonly></strong>
                 </div>
                 <!-- Cart -->
 

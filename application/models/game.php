@@ -9,5 +9,12 @@ class game extends CI_Model{
         $aListGame = $this->db->get('game');
         return $aListGame->result_array();
     }
+
+    function funcGetIdGame($abr){
+        $this->db->where('abreviasi', $abr);
+
+        $game = $this->db->get('game');
+        return $game->result_array()[0];
+    }
 }
 ?>

@@ -5,7 +5,7 @@ class cart extends CI_Model{
     	parent::__construct();
     }
     
-    function funcAddToCart($id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank){
+    function funcAddToCart($id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank, $total_win, $current_level,$desired_level){
         $data = array(
             'id_user' => $id_user, 
             'id_booster' => $id_booster, 
@@ -13,7 +13,10 @@ class cart extends CI_Model{
             'price' => $price, 
             'id_tipe_boosting' => $id_tipe_boosting, 
             'current_rank' => $current_rank, 
-            'desired_rank' => $desired_rank
+            'desired_rank' => $desired_rank,
+            'total_win' => $total_win, 
+            'current_level'=>$current_level,
+            'desired_level'=>$desired_level
         );
         $result = $this->db->insert('cart', $data);
 
@@ -38,7 +41,7 @@ class cart extends CI_Model{
     }
 
     function funcGetUsersCart($idUser){
-        $this->db->join('tipe_boosting', 'tipe_boosting.id = cart.id_tipe_boosting');
+        $this->db->join('tipe_boosting', 'tipe_boosting.id_tipeboosting = cart.id_tipe_boosting');
         $this->db->where('id_user', $idUser);
 
         $cart = $this->db->get('cart');

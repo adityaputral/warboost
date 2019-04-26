@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'C_home/index';
 $route['games/(:any)'] = 'C_pages/funcIndex/$1';
-$route['calculate'] = 'C_pages/funcCalculatePrice';
+$route['calculate/(:any)'] = 'C_pages/funcCalculatePrice/$1';
 $route['addToCart'] = 'C_cart/funcAddToCart';
 $route['removeItem/(:any)'] = 'C_cart/funcRemoveSelectedItem/$1';
 $route['checkout'] = 'C_checkout/index';

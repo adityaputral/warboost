@@ -163,3 +163,5 @@
                 <!-- /Accordion -->
             </div>
             <!-- /Post Text -->
+            </div>
+            </div>

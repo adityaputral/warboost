@@ -33,6 +33,6 @@ class booster extends CI_Model{
         $this->db->join('game', 'specialty.id_game = game.id');
         $this->db->where('username', $username);
         $aListBooster = $this->db->get('booster');
-        return $aListBooster->result_array()[0];
+        return $aListBooster->result_array();
     }
 }

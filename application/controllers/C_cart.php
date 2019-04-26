@@ -10,11 +10,14 @@ class C_cart extends CI_Controller{
 
         $aCart['listCart'] = $this->cart->funcGetUsersCart($this->session->userdata('id'));
 
+		$aHeader['listCart'] = $this->cart->funcGetUsersCart($this->session->userdata('id'));
+		$aHeader['games'] = $this->game->funcGetListGame();
+
         // var_dump($aCart);
         
         $this->session->set_userdata('referred_from', current_url());
 
-		$this->load->view('templates_user/V_header', $aCart);
+		$this->load->view('templates_user/V_header', $aHeader);
 		$this->load->view('pages_user/V_cart', $aCart);
 		$this->load->view('templates_user/V_footer');
 
@@ -23,15 +26,19 @@ class C_cart extends CI_Controller{
     function funcAddToCart(){
         $this->load->model('cart');
         if($this->session->userdata('logged_in')){
-            $id_user = $this->session->userdata('id'); 
-            $id_booster = $this->input->post('booster'); 
-            $id_game=$this->input->post('game');
-            $price = $this->input->post('price');
-            $id_tipe_boosting = $this->input->post('tipe_boosting'); 
-            $current_rank = $this->input->post('current_rank');
-            $desired_rank = $this->input->post('desired_rank');
-    
-            $res = $this->cart->funcAddToCart($id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank);
+            $jenis_boost = $this->input->post('jenis_boost');
+                $id_user = $this->session->userdata('id'); 
+                $id_booster = $this->input->post('booster'); 
+                $id_game=$this->input->post('game');
+                $price = $this->input->post('price');
+                $id_tipe_boosting = $this->input->post('tipe_boosting'); 
+                $current_rank = $this->input->post('current_rank');
+                $desired_rank = $this->input->post('desired_rank');
+                $total_win = $this->input->post('total_win');
+                $current_level = $this->input->post('current_level');
+                $desired_level = $this->input->post('desired_level');
+        
+                $res = $this->cart->funcAddToCart($id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank, $total_win, $current_level,$desired_level);
     
             if($res){
                 $this->session->set_flashdata('status', 'success');
