@@ -76,7 +76,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <p>Favorite games</p>
+                            <p>Specialty Game</p>
                         </td>
                         <td>
                             <p><?php echo $dataBooster['nama_game']; ?></p>

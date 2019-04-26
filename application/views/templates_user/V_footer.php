@@ -226,14 +226,14 @@
                         var currentRank = $('#current_rank option:selected').val();
                         var desiredRank = $('#desired_rank option:selected').val();
                         $.ajax({
-                            url: "<?php echo base_url(); ?>calculate",
+                            url: "<?php echo base_url(); ?>calculate/0",
                             method: "POST",
                             data: {
                                 current_rank: currentRank,
                                 desired_rank: desiredRank
                             },
                             success: function(data) {
-                                $('#pricing').html(data);
+                                $('#pricing_rank').html(data);
                             }
                         });
                     });
@@ -242,14 +242,66 @@
                         var currentRank = $('#current_rank option:selected').val();
                         var desiredRank = $('#desired_rank option:selected').val();
                         $.ajax({
-                            url: "<?php echo base_url(); ?>calculate",
+                            url: "<?php echo base_url(); ?>calculate/0",
                             method: "POST",
                             data: {
                                 current_rank: currentRank,
                                 desired_rank: desiredRank
                             },
                             success: function(data) {
-                                $('#pricing').html(data);
+                                $('#pricing_rank').html(data);
+                            }
+                        });
+                    });
+
+                    $('#current_level').change(function() {
+                        var currentLevel = $('#current_level').val();
+                        var desiredLevel = $('#desired_level').val();
+                        var idGame = $('#id_game').val();
+                        $.ajax({
+                            url: "<?php echo base_url(); ?>calculate/1",
+                            method: "POST",
+                            data: {
+                                current_level: currentLevel,
+                                desired_level: desiredLevel,
+                                id_game: idGame
+                            },
+                            success: function(data) {
+                                $('#pricing_level').html(data);
+                            }
+                        });
+                    });
+
+                    $('#desired_level').change(function() {
+                        var currentLevel = $('#current_level').val();
+                        var desiredLevel = $('#desired_level').val();
+                        var idGame = $('#id_game').val();
+                        $.ajax({
+                            url: "<?php echo base_url(); ?>calculate/1",
+                            method: "POST",
+                            data: {
+                                current_level: currentLevel,
+                                desired_level: desiredLevel,
+                                id_game: idGame
+                            },
+                            success: function(data) {
+                                $('#pricing_level').html(data);
+                            }
+                        });
+                    });
+
+                    $('#total_win').change(function() {
+                        var totalWin = $('#total_win').val();
+                        var idGame = $('#id_game').val();
+                        $.ajax({
+                            url: "<?php echo base_url(); ?>calculate/2",
+                            method: "POST",
+                            data: {
+                                total_win: totalWin,
+                                id_game: idGame
+                            },
+                            success: function(data) {
+                                $('#pricing_win').html(data);
                             }
                         });
                     });
@@ -261,27 +313,27 @@
             $stat = $this->session->flashdata('status');
             if (isset($notif)) {
                 echo "<script>
-  $(window).on('load', function(){
-    showRegistrationStatus('$stat');
-  });
+                    $(window).on('load', function(){
+                        showRegistrationStatus('$stat');
+                    });
 
-  function showRegistrationStatus(status) {
-    if(status == 'error'){
-      swal(
-        'Gagal',
-        '$notif',
-        status
-      )
-    } else if(status == 'success'){
-      swal(
-        'Berhasil',
-        '$notif',
-        status
-      )
-    }
-    
-  }
-</script>";
+                    function showRegistrationStatus(status) {
+                        if(status == 'error'){
+                        swal(
+                            'Gagal',
+                            '$notif',
+                            status
+                        )
+                        } else if(status == 'success'){
+                        swal(
+                            'Berhasil',
+                            '$notif',
+                            status
+                        )
+                        }
+                        
+                    }
+                    </script>";
             }
             ?>
 

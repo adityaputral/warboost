@@ -1,4 +1,40 @@
 <?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP 5.2.4 or newer
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
+ * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license	http://opensource.org/licenses/MIT	MIT License
+ * @link	http://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -39,47 +75,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
 */
+
 $autoload['packages'] = array();
+
 
 /*
 | -------------------------------------------------------------------
 |  Auto-load Libraries
 | -------------------------------------------------------------------
-| These are the classes located in system/libraries/ or your
-| application/libraries/ directory, with the addition of the
-| 'database' library, which is somewhat of a special case.
+| These are the classes located in the system/libraries folder
+| or in your application/libraries folder.
 |
 | Prototype:
 |
-|	$autoload['libraries'] = array('database', 'email', 'session');
+|	$autoload['libraries'] = array('database', 'email', 'xmlrpc');
 |
 | You can also supply an alternative library name to be assigned
 | in the controller:
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+
+$autoload['libraries'] = array('database','form_validation','upload','pagination', 'session');
+
 
 /*
 | -------------------------------------------------------------------
 |  Auto-load Drivers
 | -------------------------------------------------------------------
-| These classes are located in system/libraries/ or in your
-| application/libraries/ directory, but are also placed inside their
-| own subdirectory and they extend the CI_Driver_Library class. They
+| These classes are located in the system/libraries folder or in your
+| application/libraries folder within their own subdirectory. They
 | offer multiple interchangeable driver options.
 |
 | Prototype:
 |
-|	$autoload['drivers'] = array('cache');
-|
-| You can also supply an alternative property name to be assigned in
-| the controller:
-|
-|	$autoload['drivers'] = array('cache' => 'cch');
-|
+|	$autoload['drivers'] = array('session', 'cache');
 */
+
 $autoload['drivers'] = array();
+
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +123,9 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array();
+
+$autoload['helper'] = array('url','number','form','html','file');
+
 
 /*
 | -------------------------------------------------------------------
@@ -103,7 +139,9 @@ $autoload['helper'] = array();
 | config files.  Otherwise, leave it blank.
 |
 */
+
 $autoload['config'] = array();
+
 
 /*
 | -------------------------------------------------------------------
@@ -117,7 +155,9 @@ $autoload['config'] = array();
 | "codeigniter_lang.php" would be referenced as array('codeigniter');
 |
 */
+
 $autoload['language'] = array();
+
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +172,9 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+
+$autoload['model'] = array('');
+
+
+/* End of file autoload.php */
+/* Location: ./application/config/autoload.php */

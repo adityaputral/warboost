@@ -15,13 +15,15 @@ class C_home extends CI_Controller {
 		$aData['listGame'] = $this->game->funcGetListGame();
 		$aData['listBooster'] = $this->booster->funcGetListBooster();
 		$aData['list5LatestTransaksi'] = $this->transaksi->funcGet5LatestTransaksi();
-		$aCart['listCart'] = $this->cart->funcGetUsersCart($this->session->userdata('id'));
 
-		// var_dump($aCart);
+		$aHeader['listCart'] = $this->cart->funcGetUsersCart($this->session->userdata('id'));
+		$aHeader['games'] = $this->game->funcGetListGame();
+
+		// var_dump($aGame);
 
 		$this->session->set_userdata('referred_from', current_url());
 
-		$this->load->view('templates_user/V_header', $aCart);
+		$this->load->view('templates_user/V_header', $aHeader);
 		$this->load->view('pages_user/V_home', $aData);
 		$this->load->view('templates_user/V_footer');
 		}

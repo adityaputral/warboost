@@ -117,24 +117,34 @@
                 <span class="label">all games</span>
             </a>
             <div class="dropdown-menu" style="width: 320px;">
-                <ul role="menu">
-                    <li><a href="<?php echo base_url();?>games/csgo">CS:GO</a>
-                    </li>
-                    <li><a href="<?php echo base_url();?>games/dota-2">Dota 2</a>
+                <?php $counter=0; foreach ($games as $game){
+                    if($counter%3 == 0){?>
+                        <ul role="menu">
+                    <?php } ?>
+
+                    <li><a href="<?php echo base_url();?>games/<?php echo $game['abreviasi'];?>"><?php echo $game['nama_game'];?></a></li>
+
+                    <?php if($counter%3 == 2){?>
+                        </ul>
+                    <?php } ?>
+                <?php $counter++;} ?>
+                
+                    
+                    <!-- <li><a href="<?php echo base_url();?>games/dota-2">Dota 2</a>
                     </li>
                     <li><a href="<?php echo base_url();?>games/overwatch">Overwatch</a>
-                    </li>
-                </ul>
+                    </li> -->
+                
                 <!--
                         -->
-                <ul role="menu">
+                <!-- <ul role="menu">
                 <li><a href="<?php echo base_url();?>games/rocket-league">Rocket League</a>
                     </li>
                     <li><a href="<?php echo base_url();?>games/lol">League of Legends</a>
                     </li>
                     <li><a href="<?php echo base_url();?>games/apex-legends">Apex Legends</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </li>
 
@@ -237,7 +247,7 @@
 
                                 <div class="btn-group pull-right m-15">
                                     <a href="<?php echo base_url();?>cart" class="btn btn-default btn-sm">View Cart</a>
-                                    <a href="#" class="btn btn-default btn-sm">Checkout</a>
+                                    <a href="<?php echo base_url();?>checkout" class="btn btn-default btn-sm">Checkout</a>
                                 </div>
                             <?php } else{?>
                                 <div class="row youplay-side-news">
