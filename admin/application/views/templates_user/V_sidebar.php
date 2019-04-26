@@ -23,7 +23,6 @@
             <li>
                 <a href="index.html">
                     <i class="fe-airplay"></i>
-                    <span class="badge badge-success float-right">08</span>
                     <span> Dashboard </span>
                 </a>
             </li>
@@ -31,189 +30,32 @@
             <li>
                 <a href="ui-elements.html">
                     <i class="fe-briefcase"></i>
-                    <span> UI Elements </span>
+                    <span> List Transaction </span>
                 </a>
             </li>
 
-            <li>
-                <a href="javascript: void(0);">
-                    <i class="fe-layers"></i>
-                    <span> Components </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <ul class="nav-second-level" aria-expanded="false">
-                    <li>
-                        <a href="components-rangeslider.html">Range Slider</a>
-                    </li>
-                    <li>
-                        <a href="components-alerts.html">Alerts</a>
-                    </li>
-                    <li>
-                        <a href="components-ribbons.html">Ribbons</a>
-                    </li>
-                    <li>
-                        <a href="components-sweet-alerts.html">Sweet Alerts</a>
-                    </li>
-                </ul>
-            </li>
 
             <li>
-                <a href="typography.html">
-                    <i class="fe-type"></i>
-                    <span> Typography </span>
+                <a href="maps.html">
+                    <i class="mdi mdi-gamepad"></i>
+                    <span> Add Game</span>
                 </a>
             </li>
 
-            <li>
-                <a href="javascript: void(0);">
-                    <i class="fe-bookmark"></i>
-                    <span class="badge badge-secondary float-right">Hot</span>
-                    <span> Forms </span>
-                </a>
-                <ul class="nav-second-level" aria-expanded="false">
-                    <li>
-                        <a href="form-elements.html">General Elements</a>
-                    </li>
-                    <li>
-                        <a href="form-advanced.html">Advanced Form</a>
-                    </li>
-                </ul>
-            </li>
+            <li class="menu-title">Register</li>
 
             <li>
-                <a href="charts.html">
-                    <i class="fe-bar-chart-2"></i>
-                    <span> Charts </span>
+                <a href="maps.html">
+                    <i class="fe-user"></i>
+                    <span> Register Booster </span>
                 </a>
-            </li>
-
-            <li>
-                <a href="javascript: void(0);">
-                    <i class="fe-grid"></i>
-                    <span> Tables </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <ul class="nav-second-level" aria-expanded="false">
-                    <li>
-                        <a href="tables-basic.html">Basic Tables</a>
-                    </li>
-                    <li>
-                        <a href="tables-advanced.html">Advanced Tables</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="menu-title">More</li>
-
-            <li>
-                <a href="javascript: void(0);">
-                    <i class="fe-sidebar"></i>
-                    <span> Layouts </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <ul class="nav-second-level" aria-expanded="false">
-                    <li>
-                        <a href="layouts-light-sidebar.html">Light Sidebar</a>
-                    </li>
-                    <li>
-                        <a href="layouts-sm-sidebar.html">Small Sidebar</a>
-                    </li>
-                    <li>
-                        <a href="layouts-dark-sidebar.html">Dark Sidebar</a>
-                    </li>
-                    <li>
-                        <a href="layouts-light-topbar.html">Light Topbar</a>
-                    </li>
-                </ul>
             </li>
 
             <li>
                 <a href="maps.html">
-                    <i class="fe-map"></i>
-                    <span> Maps </span>
+                    <i class="fe-user"></i>
+                    <span> Register Admin </span>
                 </a>
-            </li>
-
-            <li>
-                <a href="javascript: void(0);">
-                    <i class="fe-cpu"></i>
-                    <span> Icons </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <ul class="nav-second-level" aria-expanded="false">
-                    <li>
-                        <a href="icons-feather.html">Feather Icons</a>
-                    </li>
-                    <li>
-                        <a href="icons-mdi.html">Material Design Icons</a>
-                    </li>
-                    <li>
-                        <a href="icons-dripicons.html">Dripicons</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="javascript: void(0);">
-                    <i class="fe-package"></i>
-                    <span> Pages </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <ul class="nav-second-level" aria-expanded="false">
-                    <li>
-                        <a href="pages-calendar.html">Calendar</a>
-                    </li>
-                    <li>
-                        <a href="pages-timeline.html">Timeline</a>
-                    </li>
-                    <li>
-                        <a href="pages-invoice.html">Invoice</a>
-                    </li>
-                    <li>
-                        <a href="pages-contacts.html">Contacts</a>
-                    </li>
-                    <li>
-                        <a href="pages-login.html">Login</a>
-                    </li>
-                    <li>
-                        <a href="pages-register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="pages-recoverpw.html">Recover Password</a>
-                    </li>
-                    <li>
-                        <a href="pages-lock-screen.html">Lock Screen</a>
-                    </li>
-                    <li>
-                        <a href="pages-404.html">Error 404</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="javascript: void(0);">
-                    <i class="fe-folder-plus"></i>
-                    <span> Multi Level </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <ul class="nav-second-level nav" aria-expanded="false">
-                    <li>
-                        <a href="javascript: void(0);">Level 1.1</a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0);" aria-expanded="false">Level 1.2
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="nav-third-level nav" aria-expanded="false">
-                            <li>
-                                <a href="javascript: void(0);">Level 2.1</a>
-                            </li>
-                            <li>
-                                <a href="javascript: void(0);">Level 2.2</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </li>
         </ul>
 

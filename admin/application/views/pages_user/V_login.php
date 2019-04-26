@@ -10,7 +10,7 @@
                                     <a href="index.html">
                                         <span><img src="assets/images/logo.png" alt="" height="22"></span>
                                     </a>
-                                    <p class="text-muted mb-4 mt-3">Enter your email address and password to access admin panel.</p>
+                                    <p class="text-muted mb-4 mt-3">Enter your username and password to access admin panel.</p>
                                 </div>
 
                                 <form method="post" action="<?php echo base_url();?>loginAttempt">
@@ -41,14 +41,6 @@
                             </div> <!-- end card-body -->
                         </div>
                         <!-- end card -->
-
-                        <div class="row mt-3">
-                            <div class="col-12 text-center">
-                                <p class="text-muted"> <a href="pages-register.html" class="text-muted ml-1">Forgot your password?</a></p>
-                                <p class="text-muted">Don't have an account? <a href="pages-register.html" class="text-dark ml-1"><b>Sign Up</b></a></p>
-                            </div> <!-- end col -->
-                        </div>
-                        <!-- end row -->
 
                     </div> <!-- end col -->
                 </div>

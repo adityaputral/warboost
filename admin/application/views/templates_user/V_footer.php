@@ -3,14 +3,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                Simulor Admin &copy; 2018 - Coderthemes.com
-                            </div>
-                            <div class="col-md-6">
-                                <div class="text-md-right footer-links d-none d-sm-block">
-                                    <a href="#">About Us</a>
-                                    <a href="#">Help</a>
-                                    <a href="#">Contact Us</a>
-                                </div>
+                                Warboost &copy; 2019 - warboost.com
                             </div>
                         </div>
                     </div>
@@ -64,9 +57,9 @@
         <!-- Plugins js -->
         <script src="<?php echo base_url();?>assets/js/vendor/Chart.bundle.js"></script>
         <script src="<?php echo base_url();?>assets/js/vendor/jquery.sparkline.min.js"></script>
-        <!-- demo -->
-        <script src="<?php echo base_url();?>assets/js/pages/chartjs.init.js"></script>
-        <script src="<?php echo base_url();?>assets/js/pages/sparkline.init.js"></script>
+        <script src="<?php echo base_url();?>assets/js/vendor/jquery.knob.min.js"></script>
+
+        <script src="<?php echo base_url();?>assets/js/pages/dashboard.init.js"></script>
 
     </body>
 </html>

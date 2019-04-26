@@ -8,7 +8,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico">
+        <link rel="shortcut icon" href="<?php echo base_url();?>assets/assets/images/favicon.ico">
 
         <!-- App css -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -16,6 +16,8 @@
         <link href="<?php echo base_url();?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>assets/css/app.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/vendor/sweetalert2.min.css">
+        <!-- Notification css (Toastr) -->
+        <link href="<?php echo base_url();?>assets/css/vendor/toastr.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -23,3 +25,4 @@
 
         <!-- Begin page -->
         <div id="wrapper">
+            

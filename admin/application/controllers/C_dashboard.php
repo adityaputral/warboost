@@ -15,6 +15,7 @@ class C_dashboard extends CI_Controller
 
         $this->load->view('templates_user/V_header');
         $this->load->view('templates_user/V_sidebar');
+        $this->load->view('templates_user/V_topbar');
         $this->load->view('pages_user/V_dashboard');
         $this->load->view('templates_user/V_footer');
     }
