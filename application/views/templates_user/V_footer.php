@@ -264,7 +264,7 @@
                             data: {
                                 current_level: currentLevel,
                                 desired_level: desiredLevel,
-                                id_game:idGame
+                                id_game: idGame
                             },
                             success: function(data) {
                                 $('#pricing_level').html(data);
@@ -282,7 +282,7 @@
                             data: {
                                 current_level: currentLevel,
                                 desired_level: desiredLevel,
-                                id_game:idGame
+                                id_game: idGame
                             },
                             success: function(data) {
                                 $('#pricing_level').html(data);
@@ -298,7 +298,7 @@
                             method: "POST",
                             data: {
                                 total_win: totalWin,
-                                id_game:idGame
+                                id_game: idGame
                             },
                             success: function(data) {
                                 $('#pricing_win').html(data);
@@ -313,27 +313,27 @@
             $stat = $this->session->flashdata('status');
             if (isset($notif)) {
                 echo "<script>
-  $(window).on('load', function(){
-    showRegistrationStatus('$stat');
-  });
+                    $(window).on('load', function(){
+                        showRegistrationStatus('$stat');
+                    });
 
-  function showRegistrationStatus(status) {
-    if(status == 'error'){
-      swal(
-        'Gagal',
-        '$notif',
-        status
-      )
-    } else if(status == 'success'){
-      swal(
-        'Berhasil',
-        '$notif',
-        status
-      )
-    }
-    
-  }
-</script>";
+                    function showRegistrationStatus(status) {
+                        if(status == 'error'){
+                        swal(
+                            'Gagal',
+                            '$notif',
+                            status
+                        )
+                        } else if(status == 'success'){
+                        swal(
+                            'Berhasil',
+                            '$notif',
+                            status
+                        )
+                        }
+                        
+                    }
+                    </script>";
             }
             ?>
 
