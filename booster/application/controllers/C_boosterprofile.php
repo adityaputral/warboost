@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_boosterprofile extends CI_Controller {
 
+	public function __construct(){
+		// session_start();
+		parent::__construct();
+		$this->load->model('booster');
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,9 +26,11 @@ class C_boosterprofile extends CI_Controller {
 	 */
 	public function index()
 	{
+		$aData['details'] = $this->booster->getProfile();
+// var_dump($aData['details']);
 		$this->load->helper('url');
 		$this->load->view('templates_booster/V_header');
-		$this->load->view('V_boosterprofile');
+		$this->load->view('V_boosterprofile',$aData);
 		$this->load->view('templates_booster/V_footer');
 	}
 }
