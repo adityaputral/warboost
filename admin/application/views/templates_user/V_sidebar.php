@@ -21,7 +21,7 @@
             <li class="menu-title">Navigation</li>
 
             <li>
-                <a href="index.html">
+                <a href="<?php echo base_url();?>">
                     <i class="fe-airplay"></i>
                     <span> Dashboard </span>
                 </a>
@@ -52,7 +52,7 @@
             </li>
 
             <li>
-                <a href="maps.html">
+                <a href="<?php echo base_url();?>register-admin">
                     <i class="fe-user"></i>
                     <span> Register Admin </span>
                 </a>
