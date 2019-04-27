@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2019 at 02:35 PM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: Apr 27, 2019 at 08:51 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -103,12 +103,18 @@ CREATE TABLE `cart` (
   `id_game` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `id_tipe_boosting` int(11) NOT NULL,
-  `current_rank` int(11) DEFAULT NULL,
-  `desired_rank` int(11) DEFAULT NULL,
-  `total_win` int(11) DEFAULT NULL,
-  `current_level` int(11) DEFAULT NULL,
-  `desired_level` int(11) DEFAULT NULL
+  `current_rank` int(11) NOT NULL,
+  `desired_rank` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id_cart`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`) VALUES
+(26, 1, 1, 5, '118.44', 11, 17, 29),
+(27, 1, 19, 5, '20.90', 11, 1, 3),
+(28, 1, 19, 5, '52.25', 11, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -299,26 +305,8 @@ CREATE TABLE `specialty` (
 
 INSERT INTO `specialty` (`id_booster`, `id_game`) VALUES
 (1, 5),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 0),
-(6, 1),
-(7, 0),
-(8, 2),
-(9, 3),
 (10, 1),
-(11, 4),
-(12, 5),
-(13, 0),
-(14, 1),
-(15, 2),
-(16, 3),
-(17, 4),
-(18, 5),
-(19, 0),
-(20, 0),
-(21, 1);
+(19, 0);
 
 -- --------------------------------------------------------
 
@@ -393,7 +381,7 @@ INSERT INTO `tipe_boosting` (`id_tipeboosting`, `nama_boosting`, `id_game`, `jen
 --
 
 CREATE TABLE `transaksi` (
-  `id` int(11) NOT NULL,
+  `id_transaction` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_booster` int(11) NOT NULL,
@@ -415,21 +403,8 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`, `total_win`, `current_level`, `desired_level`, `id_payment`, `username_akun`, `password_akun`, `notes`) VALUES
-(6, '2019-04-24', 4, 1, 5, '60.72', 11, 17, 25, NULL, NULL, NULL, 2, 'dnawkndkw', 'kdamkmdwak', 'dakwmdkam'),
-(7, '2019-04-24', 4, 1, 5, '60.72', 11, 17, 25, NULL, NULL, NULL, 2, 'dnawkndkw', 'kdamkmdwak', 'dakwmdkam'),
-(8, '2019-04-26', 1, 10, 1, '25.94', 1, NULL, NULL, NULL, NULL, NULL, 2, 'adwad', 'adwadwa', 'adwadwa'),
-(9, '2019-04-26', 1, 10, 1, '122.61', 1, NULL, NULL, NULL, NULL, NULL, 2, 'awdawd', 'awdadw', 'dawdaw'),
-(10, '2019-04-26', 1, 10, 1, '81.74', 1, NULL, NULL, NULL, NULL, NULL, 2, 'awdaw', 'adwadwa', 'dwadwadaw'),
-(11, '2019-04-26', 1, 10, 1, '40.87', 1, NULL, NULL, NULL, NULL, NULL, 2, 'awdaw', '', 'dwadwadaw'),
-(12, '2019-04-26', 1, 10, 1, '5.90', 2, NULL, NULL, NULL, NULL, NULL, 2, 'adwadwa', 'dawda', 'dawda'),
-(13, '2019-04-26', 1, 1, 5, '202.44', 11, 17, 33, NULL, NULL, NULL, 2, 'dawda', 'dwadaw', 'dawda'),
-(14, '2019-04-26', 1, 10, 1, '8.85', 2, NULL, NULL, NULL, NULL, NULL, 2, 'dawd', 'adwad', 'wadawdaw'),
-(15, '2019-04-26', 1, 10, 1, '40.87', 1, NULL, NULL, NULL, NULL, NULL, 2, 'wdadwa', 'dawd', 'adwadaw'),
-(16, '2019-04-26', 1, 10, 1, '25.94', 1, NULL, NULL, NULL, NULL, NULL, 2, 'dwadwa', 'dawdaw', 'dawda'),
-(17, '2019-04-26', 1, 10, 1, '5.90', 2, NULL, NULL, NULL, NULL, NULL, 2, 'wdadwa', 'dawda', 'wdadwa'),
-(18, '2019-04-26', 1, 10, 1, '40.87', 1, NULL, NULL, 3, NULL, NULL, 2, 'adwad', 'awdawd', 'awdaw'),
-(19, '2019-04-26', 1, 10, 1, '11.80', 2, NULL, NULL, NULL, 1, 5, 2, 'dwa', 'dawdaw', 'dawdawd');
+INSERT INTO `transaksi` (`id_transaction`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`, `total_win`, `current_level`, `desired_level`, `id_payment`, `username_akun`, `password_akun`, `notes`) VALUES
+(7, '2019-04-24', 4, 1, 5, '60.72', 11, 17, 25, NULL, NULL, NULL, 2, 'dnawkndkw', 'kdamkmdwak', 'dakwmdkam');
 
 -- --------------------------------------------------------
 
@@ -606,7 +581,7 @@ ALTER TABLE `tipe_boosting`
 -- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_transaction`),
   ADD KEY `id_booster` (`id_booster`),
   ADD KEY `id_game` (`id_game`),
   ADD KEY `id_user` (`id_user`),
@@ -655,13 +630,13 @@ ALTER TABLE `booster`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `game`
 --
 ALTER TABLE `game`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `genre`
@@ -685,7 +660,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `progress`
 --
 ALTER TABLE `progress`
-  MODIFY `id_progress` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_progress` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `rank`
@@ -715,7 +690,7 @@ ALTER TABLE `tipe_boosting`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_transaction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -773,7 +748,7 @@ ALTER TABLE `level`
 --
 ALTER TABLE `progress`
   ADD CONSTRAINT `progress_ibfk_2` FOREIGN KEY (`id_status`) REFERENCES `status_progress_boosting` (`id`),
-  ADD CONSTRAINT `progress_ibfk_3` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id`);
+  ADD CONSTRAINT `progress_ibfk_3` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id_transaction`);
 
 --
 -- Constraints for table `rank`

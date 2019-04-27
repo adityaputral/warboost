@@ -52,6 +52,7 @@
 
         <div class="col-md-9">
 
+            <h2></h2>
             <ul class="pagination pagination-sm mt-0">
                 <li class="active">
                     <a href="#unam">Username</a>
@@ -162,7 +163,7 @@
                     </div>
                 </div>
             </form>
-
+            <h2></h2>
         </div>
     </div>
 </div>

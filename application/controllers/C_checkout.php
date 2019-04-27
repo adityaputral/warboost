@@ -73,7 +73,7 @@ class C_checkout extends CI_Controller
                 $this->session->set_flashdata('cart_boost_id', $id);
                 $this->session->set_flashdata('cart_boost_name', $nama);
                 //$referred_from = $this->session->userdata('referred_from');
-                redirect(snap, 'refresh');
+                redirect(snap);
                 // echo $this->show_cart($id_user);
             }
             else{
