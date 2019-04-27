@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2019 at 09:03 AM
+-- Generation Time: Apr 27, 2019 at 09:06 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -299,8 +299,26 @@ CREATE TABLE `specialty` (
 
 INSERT INTO `specialty` (`id_booster`, `id_game`) VALUES
 (1, 5),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 0),
+(6, 1),
+(7, 0),
+(8, 2),
+(9, 3),
 (10, 1),
-(19, 0);
+(11, 4),
+(12, 5),
+(13, 0),
+(14, 1),
+(15, 2),
+(16, 3),
+(17, 4),
+(18, 5),
+(19, 0),
+(20, 0),
+(21, 1);
 
 -- --------------------------------------------------------
 
