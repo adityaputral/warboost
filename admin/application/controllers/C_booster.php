@@ -1,6 +1,6 @@
 <?php
 
-class C_admin extends CI_Controller
+class C_booster extends CI_Controller
 {
 
     public function __construct()
@@ -23,19 +23,52 @@ class C_admin extends CI_Controller
         }
     }
 
-    public function funcRegisterAdmin(){
+    public function funcRegisterBooster(){
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-        $nama = $this->input->post('name');
-        $nickname = $this->input->post('nickname');
-        $tanggalLahir = $this->input->post('tanggalLahir');
-        $nomorHP = $this->input->post('nomorHP');
+        $nama = $this->input->post('nama');
+        $nickname = $this->input->post('ingame_nickname');
+        $tanggalLahir = $this->input->post('tanggal_lahir');
+        $nomorHP = $this->input->post('nomor_hp');
         $email = $this->input->post('email');
         $rating = $this->input->post('rating');
-        $status = $this->input->post('status');
-        $aboutMe = $this->input->post('aboutMe');
+        $status = $this->input->post('id_status');
+        $profilPic = $this->input->post('path_profilPic');
+        $aboutMe = $this->input->post('about_me');
+        
+        if (empty($_FILES['path_profilPic']['name'])) {
+            $this->session->set_flashdata('status', 'error');
+            $this->session->set_flashdata('notification', 'Harap upload profil picture Anda');
+            redirect('/');
+        }
+          if (isset($_FILES['path_profilPic'])  && is_uploaded_file($_FILES['path_profilPic']['tmp_name'])) {
+            $sNewFileName         = $username."-".pathinfo($_FILES['path_profilPic']['name'],PATHINFO_EXTENSION);;
+            $config['file_name']       = $sNewFileName;
+            $config['upload_path']          = "../assets/images/profile/booster";
+            $config['allowed_types']        = 'jpeg|jpg|png';
+            $config['detect_mime']          = 'TRUE';
+            $config['max_size']             = 5120;
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+            $profilPic = $sNewFileName;
+        
+      
+            $logo = $sNewFileName;
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+      
+            if (!$this->upload->do_upload('path_profilPic')) {
+              $this->session->set_flashdata('status', 'error');
+              $this->session->set_flashdata('notification', 'Ekstensi atau ukuran file PROFIL PICTURE tidak sesuai');
+      
+              $error = array('error' => $this->upload->display_errors());
+              redirect('/');
+            } else {
+              $data = array('upload_data' => $this->upload->data());
+            }
+          }
 
-        if($username != "" && $password != "" && $nama != "" && $nickname!="" && $tanggalLahir!="" && $nomorHP!="" && $email!="" && $rating!="" && $status!="" && $aboutMe!=""){
+        
             $this->load->model('booster');
             if($this->booster->checkUsername($username)){
                 $this->session->set_flashdata('status', 'error');
@@ -48,7 +81,7 @@ class C_admin extends CI_Controller
                 redirect('/');
             } 
             else{
-                $res = $this->admin->addAdmin($username,$password,$nama,$nickName,$tanggalLahir,$nomorHp, $email,$rating,$idStatus,$pathProfilPic,$aboutMe);
+                $res = $this->booster->addBooster($username,$password,$nama,$nickname,$tanggalLahir,$nomorHP,$email,$rating,$status,$profilPic,$aboutMe);
                 if($res){
                     $this->session->set_flashdata('status', 'success');
                     $this->session->set_flashdata('notification', 'Please check your email');
@@ -59,13 +92,7 @@ class C_admin extends CI_Controller
                     $this->session->set_flashdata('notification', 'Contact us via email at help@warboost.com');
                     redirect('/');
                 }
-            }
-            
+            }        
         }
-        else{
-            $this->session->set_flashdata('status', 'error');
-            $this->session->set_flashdata('notification', 'Please fill registration form correctly');
-            redirect('/');
-        }
-    }
+    
 }

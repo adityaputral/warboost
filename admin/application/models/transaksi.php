@@ -19,4 +19,14 @@ class transaksi extends CI_Model
 
         return $totalPrice->result_array()[0];
     }
+
+    function funcGetListTransaksi(){
+        $this->db->join('booster', 'booster.id = transaksi.id_booster');
+        $this->db->join('user', 'user.id = transaksi.id_user');
+        $this->db->join('game', 'game.id = transaksi.id_game');
+        $this->db->join('tipe_boosting', 'tipe_boosting.id_tipeboosting = transaksi.id_tipe_boosting');
+        $this->db->order_by('transaksi.tanggal','asc');
+        $aListTransaksi = $this->db->get('transaksi');
+        return $aListTransaksi->result_array();
+    }
 }

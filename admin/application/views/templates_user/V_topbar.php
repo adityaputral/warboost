@@ -11,7 +11,7 @@
 
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                    <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                    <img src="<?php echo base_url();?>assets/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                     <small class="pro-user-name ml-1">
                                         <?php echo $this->session->userdata('nama');?>
                                     </small>
@@ -22,17 +22,6 @@
                                         <h6 class="text-overflow m-0">Welcome !</h6>
                                     </div>
 
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="fe-user"></i>
-                                        <span>My Account</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="fe-settings"></i>
-                                        <span>Settings</span>
-                                    </a>
 
                                     <div class="dropdown-divider"></div>
 

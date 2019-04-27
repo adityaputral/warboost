@@ -28,7 +28,7 @@
             </li>
 
             <li>
-                <a href="ui-elements.html">
+                <a href="<?php echo base_url();?>list-transaksi">
                     <i class="fe-briefcase"></i>
                     <span> List Transaction </span>
                 </a>
@@ -52,7 +52,7 @@
             <li class="menu-title">Register</li>
 
             <li>
-                <a href="maps.html">
+                <a href="<?php echo base_url();?>register-booster">
                     <i class="fe-user"></i>
                     <span> Register Booster </span>
                 </a>
