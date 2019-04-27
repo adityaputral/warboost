@@ -93,7 +93,7 @@
 
                 <div class="align-right h3 mr-20 mb-20">
 
-                    Total: <strong>$<input type="text" id="total_price" name="total_price" style="color:white;border: none;background: transparent;width:12%" value="<?php echo $total_price; ?>" readonly></strong>
+                    Total: <strong>Rp. <input type="text" id="total_price" name="total_price" style="color:white;border: none;background: transparent;width:12%" value="<?php echo $total_price; ?>" readonly></strong>
                     <?php if(isset($cart)) { ?>
                     <input type="hidden" id="str_var" name="cart_boost_name" value="<?php echo $cart['nama_boosting'] ?>">
                     <input type="hidden" id="str_var" name="cart_price" value="<?php echo $cart['price'] ?>">

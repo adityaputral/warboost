@@ -12,7 +12,7 @@
     <section class="youplay-banner banner-top youplay-banner-parallax xsmall">
 
         <div class="image" data-speed="0.4">
-            <img src="assets/images/dark/banner-blog-bg.jpg" alt="" class="jarallax-img">
+            <img src="assets/images/banner-bg.jpg" alt="" class="jarallax-img">
         </div>
 
 
@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="col-xs-6 col-md-3 align-right">
                                         <div class="price">
-                                            $<?php echo $cart['price'];?>
+                                            Rp. <?php echo $cart['price'];?>
                                         </div>
                                         <a href="<?php echo base_url();?>removeItem/<?php echo $cart['id_cart'];?>" class="remove">
                                             <i class="fa fa-times"></i>
@@ -71,7 +71,7 @@
                     <!-- /Single Product Block -->
                 <?php $total_price+=$cart['price']; } ?>
                 <div class="align-right h3 mr-20 mb-20">
-                    Total: <strong>$<?php echo $total_price; ?></strong>
+                    Total: <strong>Rp. <?php echo $total_price; ?></strong>
                 </div>
                 <div class="align-right">
                     <a href="<?php echo base_url(); ?>checkout" class="btn btn-lg">Proceed to Checkout</a>
