@@ -42,6 +42,13 @@
                 </a>
             </li>
 
+            <li>
+                <a href="<?php echo base_url();?>tipe-boosting">
+                    <i class="mdi mdi-gamepad"></i>
+                    <span > Add Tipe Boosting</span>
+                </a>
+            </li>
+
             <li class="menu-title">Register</li>
 
             <li>

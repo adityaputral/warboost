@@ -23,4 +23,9 @@ class game extends CI_Model{
     }
   }
 
+  function funcGetListGame(){
+    $aListGame = $this->db->get('game');
+    return $aListGame->result_array();
+}
+
 }
