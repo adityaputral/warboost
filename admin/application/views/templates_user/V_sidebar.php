@@ -6,10 +6,10 @@
     <!-- LOGO -->
     <a href="index.html" class="logo text-center mb-4">
         <span class="logo-lg">
-            <img src="<?php echo base_url();?>assets/images/logo.png" alt="" height="20">
+            <img src="<?php echo base_url();?>assets/assets/images/logo.png" alt="" height="20">
         </span>
         <span class="logo-sm">
-            <img src="<?php echo base_url();?>assets/images/logo-sm.png" alt="" height="24">
+            <img src="<?php echo base_url();?>assets/assets/images/logo.png" alt="" height="24">
         </span>
     </a>
 
@@ -21,7 +21,7 @@
             <li class="menu-title">Navigation</li>
 
             <li>
-                <a href="index.html">
+                <a href="<?php echo base_url();?>">
                     <i class="fe-airplay"></i>
                     <span> Dashboard </span>
                 </a>
@@ -36,9 +36,9 @@
 
 
             <li>
-                <a href="maps.html">
+                <a href="<?php echo base_url();?>game">
                     <i class="mdi mdi-gamepad"></i>
-                    <span> Add Game</span>
+                    <span > Add Game</span>
                 </a>
             </li>
 
@@ -52,7 +52,7 @@
             </li>
 
             <li>
-                <a href="maps.html">
+                <a href="<?php echo base_url();?>register-admin">
                     <i class="fe-user"></i>
                     <span> Register Admin </span>
                 </a>

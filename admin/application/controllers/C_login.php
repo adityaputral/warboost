@@ -13,10 +13,14 @@ class C_login extends CI_Controller
     {
 
         // $this->session->set_userdata('referred_from', current_url());
-
-        $this->load->view('templates_user/V_header');
-        $this->load->view('pages_user/V_login');
-        $this->load->view('templates_user/V_footer');
+        if($this->session->userdata('logged_in')){
+            redirect('/dashboard');
+        } else{
+            $this->load->view('templates_user/V_header');
+            $this->load->view('pages_user/V_login');
+            $this->load->view('templates_user/V_footer');
+        }
+        
     }
 
     public function func404()
