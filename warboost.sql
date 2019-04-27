@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2019 at 11:15 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: Apr 27, 2019 at 08:51 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -381,7 +381,7 @@ INSERT INTO `tipe_boosting` (`id_tipeboosting`, `nama_boosting`, `id_game`, `jen
 --
 
 CREATE TABLE `transaksi` (
-  `id` int(11) NOT NULL,
+  `id_transaction` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_booster` int(11) NOT NULL,
@@ -403,8 +403,7 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`, `total_win`, `current_level`, `desired_level`, `id_payment`, `username_akun`, `password_akun`, `notes`) VALUES
-(6, '2019-04-24', 4, 1, 5, '60.72', 11, 17, 25, NULL, NULL, NULL, 2, 'dnawkndkw', 'kdamkmdwak', 'dakwmdkam'),
+INSERT INTO `transaksi` (`id_transaction`, `tanggal`, `id_user`, `id_booster`, `id_game`, `price`, `id_tipe_boosting`, `current_rank`, `desired_rank`, `total_win`, `current_level`, `desired_level`, `id_payment`, `username_akun`, `password_akun`, `notes`) VALUES
 (7, '2019-04-24', 4, 1, 5, '60.72', 11, 17, 25, NULL, NULL, NULL, 2, 'dnawkndkw', 'kdamkmdwak', 'dakwmdkam');
 
 -- --------------------------------------------------------
@@ -582,7 +581,7 @@ ALTER TABLE `tipe_boosting`
 -- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_transaction`),
   ADD KEY `id_booster` (`id_booster`),
   ADD KEY `id_game` (`id_game`),
   ADD KEY `id_user` (`id_user`),
@@ -661,7 +660,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `progress`
 --
 ALTER TABLE `progress`
-  MODIFY `id_progress` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_progress` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `rank`
@@ -691,7 +690,7 @@ ALTER TABLE `tipe_boosting`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_transaction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -749,7 +748,7 @@ ALTER TABLE `level`
 --
 ALTER TABLE `progress`
   ADD CONSTRAINT `progress_ibfk_2` FOREIGN KEY (`id_status`) REFERENCES `status_progress_boosting` (`id`),
-  ADD CONSTRAINT `progress_ibfk_3` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id`);
+  ADD CONSTRAINT `progress_ibfk_3` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id_transaction`);
 
 --
 -- Constraints for table `rank`
