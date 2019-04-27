@@ -36,9 +36,9 @@
 
 
             <li>
-                <a href="maps.html">
+                <a href="<?php echo base_url();?>game">
                     <i class="mdi mdi-gamepad"></i>
-                    <span> Add Game</span>
+                    <span > Add Game</span>
                 </a>
             </li>
 
