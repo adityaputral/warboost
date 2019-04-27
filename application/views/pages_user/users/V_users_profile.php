@@ -28,11 +28,11 @@
                     <h2><?php echo $this->session->userdata('username') ?></h2>
                     <div class="activity">
                         <div>
-                            <div class="num">2</div>
+                            <div class="num"><?php echo $booster;?></div>
                             <div class="title">Boosters</div>
                         </div>
                         <div>
-                            <div class="num">5</div>
+                            <div class="num"><?php echo $gamesBoosted;?></div>
                             <div class="title">Games Boosted</div>
                         </div>
                     </div>

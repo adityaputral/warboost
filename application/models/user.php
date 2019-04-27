@@ -69,5 +69,31 @@ class user extends CI_Model{
 		else {
 			return false;
 		}
-  }
+	}
+	
+	function countBooster($userID){
+		$item = "COUNT(DISTINCT id_booster)";
+		$this->db->select($item);
+		$this->db->where('id_user', $userID);
+		$result = $this->db->get('transaksi');
+		if($result->num_rows() == 1){
+			return $result->row(0)->$item;
+		}
+		else{
+			return false;
+		}
+	}
+
+	function countBoostedGames($userID){
+		$item = "COUNT(DISTINCT id_game)";
+		$this->db->select($item);
+		$this->db->where('id_user', $userID);
+		$result = $this->db->get('transaksi');
+		if($result->num_rows() == 1){
+			return $result->row(0)->$item;
+		}
+		else{
+			return false;
+		}
+	}
 }
