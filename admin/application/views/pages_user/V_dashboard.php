@@ -39,7 +39,7 @@
                                     <div class="card-body p-0">
                                         <div class="p-3 pb-0">
                                             <div class="float-right">
-                                                <i class="mdi mdi-currency-usd text-danger widget-icon"></i>
+                                                <i class="mdi mdi-cash text-danger widget-icon"></i>
                                             </div>
                                             <h5 class="text-muted font-weight-normal mt-0">Income amounts</h5>
                                             <h3 class="mt-2"><?php echo $totalPrice['price'];?></h3>
