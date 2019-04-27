@@ -27,14 +27,15 @@
                 <div class="user-data">
                     <h2><?php echo $this->session->userdata('username') ?></h2>
                     <div class="activity">
+                        <!--
                         <div>
-                            <div class="num"><?php echo $booster;?></div>
+                            <div class="num"><?php //echo $booster;?></div>
                             <div class="title">Boosters</div>
                         </div>
                         <div>
-                            <div class="num"><?php echo $gamesBoosted;?></div>
+                            <div class="num"><?php //echo$gamesBoosted;?></div>
                             <div class="title">Games Boosted</div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -78,24 +79,11 @@
                             <p><?php echo $email; ?></p>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <p>Boosted Games</p>
-                        </td>
-                        <td>
-                            <p>Counter Strike: Global Offensive</p>
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
 
-            <h2>Boosting Progress</h2>
-            Counter Strike: Global Offensive:
-            <div class="progress youplay-progress">
-                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                    <span class="sr-only">80% Complete</span>
-                </div>
-            </div>
+            
             <h2></h2>
         </div>
     </div>

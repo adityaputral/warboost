@@ -165,7 +165,7 @@
             <li class=" dropdown dropdown-hover">
             <a href="<?php echo base_url();?>users/activity" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 <?php echo $this->session->userdata('nama');?>
-                <span class="badge bg-default">2</span>
+                <!-- <span class="badge bg-default">2</span> -->
                 <span class="caret"></span>
                 <span class="label">user</span>
             </a><div class="dropdown-menu"><ul role="menu">
