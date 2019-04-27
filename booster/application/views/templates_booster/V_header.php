@@ -72,7 +72,7 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="<?php echo base_url();?>booster/login">
           <img src="<?php echo base_url();?>assets/images/logo-light.png" alt="">
         </a>
 
