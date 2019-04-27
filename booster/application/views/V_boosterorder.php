@@ -2,7 +2,7 @@
   <section class="youplay-banner banner-top youplay-banner-parallax small">
 
     <div class="image" data-speed="0.4">
-      <img src="<?php echo base_url();?>assets/images/dark/game-diablo-iii-1400x656.jpg" alt="" class="jarallax-img">
+      <img src="<?php echo base_url();?>assets/images/banner-bg.jpg" alt="" class="jarallax-img">
     </div>
 
     <div class="youplay-user-navigation">
@@ -81,7 +81,7 @@
             <tr>
               <th scope="row"><?php echo $i; ?></th>
               <td><?php echo $order['tanggal']; ?></td>
-              <td><?php echo $order['username']; ?></td>
+              <td><?php echo $order['username_akun']; ?></td>
               <td><?php echo $order['nama_game']; ?></td>
               <td><?php echo $order['current_rank'] ?></td>
               <td><?php echo $order['desired_rank'] ?></td>

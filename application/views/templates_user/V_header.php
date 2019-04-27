@@ -243,7 +243,7 @@
                                 </div>
                                 <?php $total_price+=$cart['price']; } ?>
 
-                                <div class="ml-20 mr-20 pull-right"><strong>Subtotal:</strong> <span class="amount">$<?php echo $total_price;?></span></div>
+                                <div class="ml-20 mr-20 pull-right"><strong>Subtotal:</strong> <span class="amount">Rp. <?php echo $total_price;?></span></div>
 
                                 <div class="btn-group pull-right m-15">
                                     <a href="<?php echo base_url();?>cart" class="btn btn-default btn-sm">View Cart</a>
@@ -288,7 +288,7 @@
                                 <br>
 
                                 <p>
-                                    <a class="no-fade" href="#">Lost password?</a> | <a href="#" class="no-fade" data-toggle="modal" data-target="#nav-registration">Register</a>
+                                    <a href="#" class="no-fade" data-toggle="modal" data-target="#nav-registration">Register</a>
                                 </p>
                             </form>
                         </div>
