@@ -45,7 +45,7 @@
             <li class="menu-title">Register</li>
 
             <li>
-                <a href="maps.html">
+                <a href="<?php echo base_url();?>register-booster">
                     <i class="fe-user"></i>
                     <span> Register Booster </span>
                 </a>

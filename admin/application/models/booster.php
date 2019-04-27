@@ -19,9 +19,9 @@ class booster extends CI_Model
             'rating' => $rating,
             'id_status' => $idStatus,
             'path_profilpic' => $pathProfilPic,
-            'about_me' => $aboutme,
+            'about_me' => $aboutMe,
         );
-        $result = $this->db->insert('game',$data);
+        $result = $this->db->insert('booster',$data);
         if($result){
            return true;
        }
@@ -44,7 +44,7 @@ class booster extends CI_Model
     function checkNickName($nickname){
         $this->db->where('ingame_nickname',$nickname);
         $result = $this->db->get('booster');
-        if($result->num_row()==1){
+        if($result->num_rows()==1){
             return true;
         }
         else{
