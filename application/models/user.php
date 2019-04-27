@@ -17,18 +17,18 @@ class user extends CI_Model{
 			return false;
 		}
   }
-    
+
   function checkUsername($username){
 		$this->db->where('username', $username);
 		$result = $this->db->get('user');
 		if($result->num_rows() == 1){
 			return true;
-		} 
+		}
 		else {
 			return false;
 		}
   }
-    
+
   function getPassword($username){
 		$item = "password";
 		$this->db->select('password');
@@ -36,12 +36,12 @@ class user extends CI_Model{
 		$result = $this->db->get('user');
 		if($result->num_rows() == 1){
 			return $result->row(0)->$item;
-		} 
+		}
 		else {
 			return false;
 		}
   }
-    
+
   function addUser($username, $password, $nama, $email){
 		$data = array(
         	'username' => $username,
@@ -65,12 +65,12 @@ class user extends CI_Model{
 		$result = $this->db->get('user');
 		if($result->num_rows() == 1){
 			return $result->row(0)->$item;
-		} 
+		}
 		else {
 			return false;
 		}
 	}
-	
+
 	function countBooster($userID){
 		$item = "COUNT(DISTINCT id_booster)";
 		$this->db->select($item);
@@ -95,5 +95,19 @@ class user extends CI_Model{
 		else{
 			return false;
 		}
+	}
+
+	function getOrder(){
+		$id = $this->session->userdata('id');
+
+		$this->db->select('*');
+		$this->db->where('id_user', $id);
+		$this->db->from('transaksi');
+		$this->db->join('user', 'user.id = transaksi.id_user', 'left');
+		$this->db->join('game', 'game.id = transaksi.id_game', 'left');
+		$this->db->join('progress', 'progress.id_transaksi = transaksi.id_transaction', 'left');
+		$this->db->join('status_progress_boosting', 'progress.id_status = status_progress_boosting.id', 'left');
+		$query = $this->db->get();
+		return $query->result_array();
 	}
 }

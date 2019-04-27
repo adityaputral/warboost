@@ -43,60 +43,47 @@
 </section>
 <!-- /Banner -->
 
-
-
-
 <div class="container youplay-content">
-
-    <div class="row">
-
-        <div class="col-md-9">
-
-            <h2></h2>
-            <!-- Activity -->
-            <div class="youplay-timeline">
-
-                <!-- Timeline Notification -->
-                <div class="youplay-timeline-block">
-                    <!-- icon -->
-                    <div class="youplay-timeline-icon bg-warning">
-                        <i class="fa fa-bell"></i>
-                    </div>
-                    <!-- /icon -->
-
-                    <!-- content -->
-                    <div class="youplay-timeline-content">
-                        <h3 class="mb-0">Notification</h3>
-                        <span class="youplay-timeline-date pt-0">20 minutes ago</span>
-                        <p>Your Booster, <a href="#">John Doe</a>, have completed the boost on Rocket League!</p>
-                        <a href="#" class="btn">OK</a>
-                    </div>
-                    <!-- content -->
-                </div>
-                <!-- /Timeline Notification -->
-
-                <!-- Timeline Notification -->
-                <div class="youplay-timeline-block">
-                    <!-- icon -->
-                    <div class="youplay-timeline-icon bg-warning">
-                        <i class="fa fa-bell"></i>
-                    </div>
-                    <!-- /icon -->
-
-                    <!-- content -->
-                    <div class="youplay-timeline-content">
-                        <h3 class="mb-0">Notification</h3>
-                        <span class="youplay-timeline-date pt-0">1 day ago</span>
-                        <p>Your Booster, <a href="#">Joe Public</a>, reached level 8 in CS:GO, 2 levels to go to finish the boost.</p>
-                        <a href="#" class="btn">OK</a>
-                    </div>
-                    <!-- content -->
-                </div>
-                <!-- /Timeline Notification -->
-            </div>
-            <!-- /Activity -->
-            <h2></h2>
-        </div>
+  <div class="row">
+    <div class="col-md-9">
+      <h2 class="h1">Orders</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Tanggal</th>
+            <th>Username</th>
+            <th>Game</th>
+            <th>Rank sekarang</th>
+            <th>Rank yang diinginkan</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          $i=1;
+          foreach ($listOrder as $order) {
+            ?>
+            <tr>
+              <th scope="row"><?php echo $i; ?></th>
+              <td><?php echo $order['tanggal']; ?></td>
+              <td><?php echo $order['username_akun']; ?></td>
+              <td><?php echo $order['nama_game']; ?></td>
+              <td><?php echo $order['current_rank'] ?></td>
+              <td><?php echo $order['desired_rank'] ?></td>
+              <td><?php if ($order['keterangan'] != null) {
+                echo $order['keterangan'];
+              }else{
+                echo "new";
+              } ?></td>
+            </tr>
+            <?php
+            $i += 1;
+          }
+          ?>
+        </tbody>
+      </table>
+      <!-- content -->
     </div>
-</div>
-</div>
+  </div>
+</div></div>
