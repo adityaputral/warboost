@@ -15,10 +15,7 @@
                             </div>
                         </div> 
             
-                        <div class="valid-feedback">
-                            <?php echo validation_errors(); ?>
-                        </div> 
-                        <form class="form-horizontal" method="post" action="<?php echo base_url();?>gameRegister">
+                        <?php echo form_open_multipart('/addGame');?>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nama Game</label>
                                     <div class="col-sm-10">
@@ -59,7 +56,7 @@
                                 <button class="btn btn-primary" type="submit">Register Game</button>
                             </div>
 
-                        </form>
+                            <?php echo form_close(); ?>
                         
             
             </div>
