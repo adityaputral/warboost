@@ -1,10 +1,10 @@
   <div class="content-wrap">
   <section class="youplay-banner banner-top youplay-banner-parallax small">
 
-    <div class="image" data-speed="0.4">
-      <img src="<?php echo base_url();?>assets/images/dark/game-diablo-iii-1400x656.jpg" alt="" class="jarallax-img">
-    </div>
 
+  <div class="image" data-speed="0.4">
+      <img src="<?php echo base_url();?>assets/images/banner-bg.jpg" alt="" class="jarallax-img">
+    </div>
 
     <div class="youplay-user-navigation">
       <div class="container">

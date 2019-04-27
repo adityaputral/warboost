@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2019 at 09:06 AM
+-- Generation Time: Apr 27, 2019 at 09:46 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -68,7 +68,7 @@ CREATE TABLE `booster` (
 --
 
 INSERT INTO `booster` (`id`, `username`, `password`, `nama`, `ingame_nickname`, `tanggal_lahir`, `nomor_hp`, `email`, `rating`, `id_status`, `path_profilpic`, `about_me`) VALUES
-(1, 'testing', 'testing', 'test', 'anonymous', '2018-07-08', '08123456789', 'testing@gmail.com', 4, 3, 'anonymous-test.jpg', ''),
+(1, 'testing', 'testing', 'test', 'anonymous', '2018-07-08', '08123456789', 'testing@gmail.com', 4, 2, 'anonymous-test.jpg', ''),
 (2, 'deaslea1', 'T8YiLr', 'Delphinia Easlea', 'Delphinia', '2018-11-30', '8562087854', 'deaslea1@hud.gov', 2, 1, 'anonymous-test.jpg', ''),
 (3, 'kflade2', '2ekzeo3pC', 'Kermit Flade', 'Kermit', '2018-10-28', '6337574264', 'kflade2@phoca.cz', 5, 1, 'anonymous-test.jpg', ''),
 (4, 'anethercott3', 'wcLqwgpW', 'Ardella Nethercott', 'Ardella', '2018-12-04', '8651572862', 'anethercott3@macromedia.com', 5, 2, 'anonymous-test.jpg', ''),
@@ -101,7 +101,7 @@ CREATE TABLE `cart` (
   `id_user` int(11) NOT NULL,
   `id_booster` int(11) NOT NULL,
   `id_game` int(11) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
+  `price` decimal(10,0) NOT NULL,
   `id_tipe_boosting` int(11) NOT NULL,
   `current_rank` int(11) DEFAULT NULL,
   `desired_rank` int(11) DEFAULT NULL,
@@ -175,10 +175,10 @@ CREATE TABLE `level` (
 --
 
 INSERT INTO `level` (`id_level`, `jumlah_level`, `id_game`, `base_price`) VALUES
-(1, 1, 4, '5'),
-(2, 1, 1, '3'),
-(3, 1, 3, '4'),
-(4, 1, 2, '3');
+(1, 1, 4, '20000'),
+(2, 1, 1, '20000'),
+(3, 1, 3, '20000'),
+(4, 1, 2, '20000');
 
 -- --------------------------------------------------------
 
@@ -215,6 +215,13 @@ CREATE TABLE `progress` (
   `id_transaksi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `progress`
+--
+
+INSERT INTO `progress` (`id_progress`, `id_status`, `notes`, `id_transaksi`) VALUES
+(3, 2, '', 7);
+
 -- --------------------------------------------------------
 
 --
@@ -233,31 +240,31 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`id_rank`, `rank`, `id_game`, `base_price`) VALUES
-(1, 'Silver 1', 0, '10'),
-(2, 'Silver 2', 0, '10'),
-(3, 'Silver 3', 0, '10'),
-(4, 'Silver 4', 0, '10'),
-(5, 'Silver Elite', 0, '10'),
-(6, 'Silver Elite Master', 0, '10'),
-(7, 'Gold Nova 1', 0, '10'),
-(8, 'Gold Nova 3', 0, '10'),
-(9, 'Gold Nova Master', 0, '10'),
-(10, 'Master Guardian', 0, '10'),
-(11, 'Master Guardian 2', 0, '10'),
-(12, 'Master Guardian Elite', 0, '10'),
-(13, 'Distinguished Master Guardian', 0, '10'),
-(14, 'Legendary Eagle', 0, '10'),
-(15, 'Legendary Eagle Master', 0, '10'),
-(16, 'Supreme Master First Class', 0, '21'),
-(17, 'Bronze 1', 5, '4'),
-(18, 'Bronze 2', 5, '4'),
-(19, 'Bronze 3', 5, '4'),
-(20, 'Silver 1', 5, '7'),
-(21, 'Silver 2', 5, '7'),
-(22, 'Silver 3', 5, '7'),
-(23, 'Gold 1', 5, '10'),
-(24, 'Gold 2', 5, '10'),
-(25, 'Gold 3', 5, '10'),
+(1, 'Silver 1', 0, '20000'),
+(2, 'Silver 2', 0, '70000'),
+(3, 'Silver 3', 0, '120000'),
+(4, 'Silver 4', 0, '170000'),
+(5, 'Silver Elite', 0, '220000'),
+(6, 'Silver Elite Master', 0, '270000'),
+(7, 'Gold Nova 1', 0, '320000'),
+(8, 'Gold Nova 3', 0, '370000'),
+(9, 'Gold Nova Master', 0, '420000'),
+(10, 'Master Guardian', 0, '470000'),
+(11, 'Master Guardian 2', 0, '520000'),
+(12, 'Master Guardian Elite', 0, '570000'),
+(13, 'Distinguished Master Guardian', 0, '620000'),
+(14, 'Legendary Eagle', 0, '670000'),
+(15, 'Legendary Eagle Master', 0, '720000'),
+(16, 'Supreme Master First Class', 0, '800000'),
+(17, 'Bronze 1', 5, '40000'),
+(18, 'Bronze 2', 5, '90000'),
+(19, 'Bronze 3', 5, '140000'),
+(20, 'Silver 1', 5, '190000'),
+(21, 'Silver 2', 5, '240000'),
+(22, 'Silver 3', 5, '290000'),
+(23, 'Gold 1', 5, '340000'),
+(24, 'Gold 2', 5, '390000'),
+(25, 'Gold 3', 5, '440000'),
 (26, 'Platinum 1', 5, '12'),
 (27, 'Platinum 2', 5, '12'),
 (28, 'Platinum 3', 5, '12'),
@@ -479,11 +486,11 @@ CREATE TABLE `win` (
 --
 
 INSERT INTO `win` (`id_win`, `jumlah_win`, `id_game`, `base_price`) VALUES
-(1, 1, 1, '14'),
-(2, 2, 1, '26'),
-(3, 3, 1, '41'),
-(4, 5, 1, '70'),
-(5, 10, 1, '105');
+(1, 1, 1, '15000'),
+(2, 2, 1, '27000'),
+(3, 3, 1, '40000'),
+(4, 5, 1, '70000'),
+(5, 10, 1, '140000');
 
 --
 -- Indexes for dumped tables
@@ -652,7 +659,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `progress`
 --
 ALTER TABLE `progress`
-  MODIFY `id_progress` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_progress` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `rank`
