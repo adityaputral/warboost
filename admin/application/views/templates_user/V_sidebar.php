@@ -21,7 +21,7 @@
             <li class="menu-title">Navigation</li>
 
             <li>
-                <a href="index.html">
+                <a href="<?php echo base_url();?>">
                     <i class="fe-airplay"></i>
                     <span> Dashboard </span>
                 </a>

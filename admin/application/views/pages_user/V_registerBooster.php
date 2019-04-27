@@ -66,16 +66,9 @@
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Rating</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
+                                <div class="col-sm-10">
+                                    <input type="text" id="rating" name="rating" class="form-control" hidden>
+                                </div>
                             </div>
                             
                             <div class="form-group row">
