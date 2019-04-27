@@ -66,11 +66,14 @@ class C_checkout extends CI_Controller
     
             if($res){
                 $this->cart->funcRemoveCart($dataCart['id_cart']);
-
-                $this->session->set_flashdata('status', 'success');
-                $this->session->set_flashdata('notification', 'Success');
-                $referred_from = $this->session->userdata('referred_from');
-                redirect($referred_from, 'refresh');
+                $price=$dataCart['price'];
+                $id=$dataCart['id_tipe_boosting'];
+                $nama=$dataCart['nama_boosting'];
+                $this->session->set_flashdata('cart_price', $price);
+                $this->session->set_flashdata('cart_boost_id', $id);
+                $this->session->set_flashdata('cart_boost_name', $nama);
+                //$referred_from = $this->session->userdata('referred_from');
+                redirect(snap, 'refresh');
                 // echo $this->show_cart($id_user);
             }
             else{

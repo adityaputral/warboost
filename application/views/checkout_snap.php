@@ -11,23 +11,43 @@
     
  
 
-
+     
 
     <form id="payment-form" method="post" action="<?=site_url()?>/snap/finish">
       <input type="hidden" name="result_type" id="result-type" value=""></div>
       <input type="hidden" name="result_data" id="result-data" value=""></div>
+      <input type="hidden" name="cartprice" id="cart_price" value="<?php echo $this->session->flashdata('cart_price')?>"></div>
+      <input type="hidden" name="cartname" id="cart_boost_name" value="<?php echo $this->session->flashdata('cart_boost_name')?>"></div>
+      <input type="hidden" name="cartid" id="cart_boost_id" value="<?php echo $this->session->flashdata('cart_boost_id')?>"></div>
+      <input type="hidden" name="custname" id="cust_name" value="<?php echo $this->session->userdata('nama');?>"></div>
+     
+
     </form>
     
-    <button id="pay-button">Pay!</button>
     <script type="text/javascript">
-  
-    $('#pay-button').click(function (event) {
+
+   // $('#pay-button').click(function (event) {
+    $(window).on('load', function(event) {
+     
       event.preventDefault();
       $(this).attr("disabled", "disabled");
     
+    var price = $('#cart_price').val();
+    var name = $('#cart_boost_name').val();
+    var id=$('#cart_boost_id').val();
+    var cust_name=$('#cust_name').val();
     $.ajax({
-      url: '<?=site_url()?>/snap/token',
+      url: '<?=site_url()?>/snap/token/',
       cache: false,
+      method:"POST",
+      data:{
+        price: price,
+        name: name,
+        id: id,
+        cust_name:cust_name
+        
+        
+      },
 
       success: function(data) {
         //location = data;
