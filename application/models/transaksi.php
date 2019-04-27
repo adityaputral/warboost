@@ -15,7 +15,7 @@ class transaksi extends CI_Model{
         return $aList5LatestTransaksi->result_array();
     }
 
-    function funcOrder($tanggal, $id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank, $total_win, $current_level,$desired_level, $id_payment, $username_akun,$password_akun, $notes){
+    function funcOrder($tanggal, $id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank, $total_win, $current_level,$desired_level, $username_akun,$password_akun, $notes){
         $data = array(
             'tanggal' => $tanggal,
             'id_user' => $id_user, 
@@ -28,7 +28,6 @@ class transaksi extends CI_Model{
             'total_win' => $total_win, 
             'current_level'=>$current_level,
             'desired_level'=>$desired_level,
-            'id_payment' => $id_payment,
             'username_akun' => $username_akun,
             'password_akun' => $password_akun,
             'notes' => $notes

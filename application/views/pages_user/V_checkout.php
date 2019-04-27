@@ -103,14 +103,14 @@
                 <!-- Cart -->
 
                 <!-- Payment Type -->
-                <h2>Payment Type</h2>
+                <!-- <h2>Payment Type</h2>
                 
-                    <?php $counter =0; foreach ($listPayment as $payment) { ?>
+                    <?php //$counter =0; foreach ($listPayment as $payment) { ?>
                         <div class="youplay-radio">
-                            <input type="radio" name="payment_type" value="<?php echo $payment['id']; ?>" id="radio<?php echo $counter;?>">
-                            <label for="radio<?php echo $counter;?>"><?php echo $payment['nama_payment']; ?></label>
+                            <input type="radio" name="payment_type" value="<?php //echo $payment['id']; ?>" id="radio<?php echo $counter;?>">
+                            <label for="radio<?php //echo $counter;?>"><?php //echo $payment['nama_payment']; ?></label>
                         </div>
-                    <?php $counter++;} ?>
+                    <?php //$counter++;} ?> -->
                 
                 
                 <!-- /Payment Type -->
