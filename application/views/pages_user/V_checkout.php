@@ -40,7 +40,7 @@
             <!-- Billing Information -->
             <h2 class="mt-0">Billing Details</h2>
 
-            <form method="post" action="<?php echo base_url(); ?>test2">
+            <form method="post" action="<?php echo base_url(); ?>placeOrder/">
                 <div class="row">
                     <div class="col-md-6">
                         <p>Username account:</p>
@@ -54,8 +54,7 @@
                             <input type="password" name="password_akun" placeholder="Password game account">
                         </div>
                     </div>
-                    <input type="hidden" id="str_var" name="cart" value="<?php print base64_encode(serialize($listCart)) ?>">;
-                </div>
+                  </div>
 
                 <p>Additional Info:</p>
                 <div class="youplay-textarea">
@@ -68,6 +67,7 @@
                 <h2>Your Boosting Cart</h2>
 
                 <?php $total_price = 0.00;
+                
                 foreach ($listCart as $cart) { ?>
 
                     <!-- Single Product Block -->
@@ -75,34 +75,42 @@
                         <div class="row">
                             <div class="col-xs-6 col-md-9">
                                 <h4 class="ml-20"><?php echo $cart['nama_boosting'] ?></h4>
+                                
                             </div>
                             <div class="col-xs-6 col-md-3 align-right">
                                 <div class="price">
                                     $<?php echo $cart['price']; ?>
+                                    
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <!-- /Single Product Block -->
-
+                    
                     <?php $total_price += $cart['price'];
                 } ?>
 
                 <div class="align-right h3 mr-20 mb-20">
 
                     Total: <strong>$<input type="text" id="total_price" name="total_price" style="color:white;border: none;background: transparent;width:12%" value="<?php echo $total_price; ?>" readonly></strong>
+                    <?php if(isset($cart)) { ?>
+                    <input type="hidden" id="str_var" name="cart_boost_name" value="<?php echo $cart['nama_boosting'] ?>">
+                    <input type="hidden" id="str_var" name="cart_price" value="<?php echo $cart['price'] ?>">
+                    <input type="hidden" id="str_var" name="cart_boost_id" value="<?php echo $cart['id_tipe_boosting'] ?>">
+                    <?php } ?>
                 </div>
                 <!-- Cart -->
 
                 <!-- Payment Type -->
-                <h2>Payment Type</h2>
+                <!-- <h2>Payment Type</h2>
                 
-                    <?php $counter =0; foreach ($listPayment as $payment) { ?>
+                    <?php //$counter =0; foreach ($listPayment as $payment) { ?>
                         <div class="youplay-radio">
-                            <input type="radio" name="payment_type" value="<?php echo $payment['id']; ?>" id="radio<?php echo $counter;?>">
-                            <label for="radio<?php echo $counter;?>"><?php echo $payment['nama_payment']; ?></label>
+                            <input type="radio" name="payment_type" value="<?php //echo $payment['id']; ?>" id="radio<?php echo $counter;?>">
+                            <label for="radio<?php //echo $counter;?>"><?php //echo $payment['nama_payment']; ?></label>
                         </div>
-                    <?php $counter++;} ?>
+                    <?php //$counter++;} ?> -->
                 
                 
                 <!-- /Payment Type -->

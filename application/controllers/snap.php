@@ -15,6 +15,7 @@ class Snap extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	
 	public function __construct()
     {
         parent::__construct();
@@ -26,7 +27,7 @@ class Snap extends CI_Controller {
     public function index()
     {
 			$this->load->view('checkout_snap');
-			
+		 
 		}
 		
 
@@ -36,32 +37,31 @@ class Snap extends CI_Controller {
 	
     public function token()
     {
-		
+			
+			
+			
 		// Required
 		$transaction_details = array(
 		  'order_id' => rand(),
-		  'gross_amount' => 167.61, // no decimal allowed for creditcard
+		  'gross_amount' => $_POST['price'], // no decimal allowed for creditcard
 		);
 		// Optional
 		//$item1_details = $this->getItemCart();
 		// Optional
-		$item2_details = array(
-		  'id' => 'a2',
-		  'price' => 167.61,
+		$item1_details = array(
+		  'id' =>  $_POST['id'],
+		  'price' => $_POST['price'],
 		  'quantity' => 1,
-		  'name' => "Orange"
+		  'name' => $_POST['name']
 		);
 		// Optional
-		$item_details = array ( $item2_details);
+		$item_details = array ( $item1_details);
 		// Optional
 		
 		// Optional
 		$customer_details = array(
-		  'first_name'    => "Andri",
-		  'last_name'     => "Litani",
-		  'email'         => "andri@litani.com",
-		  'phone'         => "081122334455"
-		 
+		  'first_name'    => $_POST['cust_name']
+		  
 		);
 		// Data yang akan dikirim untuk request redirect_url.
         $credit_card['secure'] = true;
@@ -88,9 +88,10 @@ class Snap extends CI_Controller {
     }
     public function finish()
     {
-    	$result = json_decode($this->input->post('result_data'));
-    	echo 'RESULT <br><pre>';
-    	var_dump($result);
-    	echo '</pre>' ;
+			
+			$this->session->set_flashdata('status', 'success');
+			$this->session->set_flashdata('notification', 'Success');
+			$referred_from = $this->session->userdata('referred_from');
+			redirect('/');
     }
 }

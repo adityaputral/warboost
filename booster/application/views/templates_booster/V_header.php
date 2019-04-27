@@ -79,183 +79,6 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
 
-        <!-- <ul class="nav navbar-nav">
-
-          <li class=" dropdown dropdown-hover">
-            <a href="store-1.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              Store
-              <span class="caret"></span>
-              <span class="label">games</span>
-            </a>
-
-            <div class="dropdown-menu">
-              <ul role="menu">
-                <li>
-                  <a href="store-1.html">
-                    Store Style 1
-                  </a>
-                </li>
-                <li>
-                  <a href="store-2.html">
-                    Store Style 2
-                  </a>
-                </li>
-                <li>
-                  <a href="cart.html">
-                    Cart
-                  </a>
-                </li>
-              </ul>
-
-              <ul role="menu">
-                <li>
-                  <a href="store-product-1.html">
-                    Product Style1
-                  </a>
-                </li>
-                <li>
-                  <a href="store-product-2.html">
-                    Product Style 2
-                  </a>
-                </li>
-                <li>
-                  <a href="checkout.html">
-                    Checkout
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class=" dropdown dropdown-hover">
-            <a href="blog-1.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              Blog
-              <span class="caret"></span>
-              <span class="label">news</span>
-            </a>
-            <div class="dropdown-menu">
-              <ul role="menu">
-                <li>
-                  <a href="blog-1.html">
-                    Blog Style 1
-                  </a>
-                </li>
-                <li>
-                  <a href="blog-2.html">
-                    Blog Style 2
-                  </a>
-                </li>
-                <li>
-                  <a href="blog-3.html">
-                    Blog Style 3
-                  </a>
-                </li>
-              </ul>
-              <ul role="menu">
-                <li>
-                  <a href="blog-post-1.html">
-                    Blog Post 1
-                  </a>
-                </li>
-                <li>
-                  <a href="blog-post-2.html">
-                    Blog Post 2
-                  </a>
-                </li>
-                <li>
-                  <a href="blog-post-3.html">
-                    Blog Post 3
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class=" dropdown dropdown-hover">
-            <a href="components.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              Features
-              <span class="caret"></span>
-              <span class="label">full list</span>
-            </a>
-            <div class="dropdown-menu">
-              <ul role="menu">
-                <li>
-                  <a href="forums.html">
-                    Forums
-                  </a>
-                </li>
-                <li>
-                  <a href="forums-topics.html">
-                    Forums Topics
-                  </a>
-                </li>
-                <li>
-                  <a href="forums-single-topic.html">
-                    Forums Single Topic
-                  </a>
-                </li>
-                <li>
-                  <a href="matches-list.html">
-                    Matches List
-                  </a>
-                </li>
-                <li>
-                  <a href="match.html">
-                    Match
-                  </a>
-                </li>
-                <li>
-                  <a href="match-2.html">
-                    Match with Maps
-                  </a>
-                </li>
-                <li>
-                  <a href="login.html">
-                    Login
-                  </a>
-                </li>
-              </ul>
-
-              <ul role="menu">
-                <li>
-                  <a href="widgets.html">
-                    Widgets
-                    <span class="badge bg-default">New</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="components.html">
-                    Components
-                  </a>
-                </li>
-                <li>
-                  <a href="coming-soon.html">
-                    Coming Soon
-                  </a>
-                </li>
-                <li>
-                  <a href="contact.html">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href="search.html">
-                    Search
-                  </a>
-                </li>
-                <li>
-                  <a href="404.html">
-                    404
-                  </a>
-                </li>
-                <li>
-                  <a href="blank.html">
-                    Blank
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul> -->
-
         <ul class="nav navbar-nav navbar-right">
           <?php if($this->session->userdata('logged_in')){ ?>
             <li class=" dropdown dropdown-hover">
@@ -267,17 +90,17 @@
               </a><div class="dropdown-menu"><ul role="menu">
 
                 <li>
-                  <a href="user-activity.html">
+                  <a href="<?php echo base_url();?>booster/order">
                     Order
                   </a>
                 </li>
                 <li>
-                  <a href="user-profile.html">
+                  <a href="<?php echo base_url();?>booster/login">
                     Profile
                   </a>
                 </li>
                 <li>
-                  <a href="user-settings.html">
+                  <a href="<?php echo base_url();?>booster/setting">
                     Settings
                   </a>
                 </li>
@@ -289,9 +112,7 @@
               </ul></div>
             </li>
           <?php } ?>
-
         </ul>
-
       </div>
     </div>
   </nav>

@@ -66,6 +66,7 @@
             <th>#</th>
             <th>Tanggal</th>
             <th>Username</th>
+            <th>Game</th>
             <th>Rank sekarang</th>
             <th>Rank yang diinginkan</th>
             <th>Status</th>
@@ -79,12 +80,17 @@
             ?>
             <tr>
               <th scope="row"><?php echo $i; ?></th>
+              <td><?php echo $order['tanggal']; ?></td>
               <td><?php echo $order['username']; ?></td>
               <td><?php echo $order['nama_game']; ?></td>
               <td><?php echo $order['current_rank'] ?></td>
               <td><?php echo $order['desired_rank'] ?></td>
-              <td></td>
-              <th><a href= <?php echo "order/".$order['id']; ?>>Details</a></th>
+              <td><?php if ($order['keterangan'] != null) {
+                echo $order['keterangan'];
+              }else{
+                echo "new";
+              } ?></td>
+              <th><a href= "<?php echo base_url();?>booster/order/<?php echo $order['id_transaction'];?>"</a>Details</th>
             </tr>
             <?php
             $i += 1;
