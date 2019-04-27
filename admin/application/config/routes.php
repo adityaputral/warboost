@@ -62,6 +62,7 @@ $route['logout'] = 'C_login/logout';
 $route['removeAdmin/(:any)'] = 'C_admin/funcRemoveAdmin/$1';
 $route['register-admin'] = 'C_admin/index';
 $route['addAdmin'] = 'C_admin/funcRegisterAdmin';
+$route['list-transaksi'] = 'C_transaksi/index';
 $route['register-booster'] = 'C_booster/index';
 $route['addBooster'] = 'C_booster/funcRegisterBooster';
 $route['404_override'] = '';

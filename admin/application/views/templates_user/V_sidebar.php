@@ -28,7 +28,7 @@
             </li>
 
             <li>
-                <a href="ui-elements.html">
+                <a href="<?php echo base_url();?>list-transaksi">
                     <i class="fe-briefcase"></i>
                     <span> List Transaction </span>
                 </a>
