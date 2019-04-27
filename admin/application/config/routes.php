@@ -51,7 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'C_login/index';
 $route['dashboard'] = 'C_dashboard/index';
+$route['game'] = 'C_game/index';
 $route['loginAttempt'] = 'C_login/funcLogin';
+$route['gameRegister'] = 'C_game/actionRegister';
 $route['logout'] = 'C_login/logout';
 $route['removeAdmin/(:any)'] = 'C_admin/funcRemoveAdmin/$1';
 $route['register-admin'] = 'C_admin/index';
