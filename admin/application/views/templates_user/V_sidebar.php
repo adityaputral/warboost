@@ -6,10 +6,10 @@
     <!-- LOGO -->
     <a href="index.html" class="logo text-center mb-4">
         <span class="logo-lg">
-            <img src="<?php echo base_url();?>assets/images/logo.png" alt="" height="20">
+            <img src="<?php echo base_url();?>assets/assets/images/logo.png" alt="" height="20">
         </span>
         <span class="logo-sm">
-            <img src="<?php echo base_url();?>assets/images/logo-sm.png" alt="" height="24">
+            <img src="<?php echo base_url();?>assets/assets/images/logo.png" alt="" height="24">
         </span>
     </a>
 
