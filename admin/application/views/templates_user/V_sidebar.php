@@ -52,7 +52,7 @@
             </li>
 
             <li>
-                <a href="maps.html">
+                <a href="<?php echo base_url();?>register-admin">
                     <i class="fe-user"></i>
                     <span> Register Admin </span>
                 </a>

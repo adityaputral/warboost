@@ -54,5 +54,7 @@ $route['dashboard'] = 'C_dashboard/index';
 $route['loginAttempt'] = 'C_login/funcLogin';
 $route['logout'] = 'C_login/logout';
 $route['removeAdmin/(:any)'] = 'C_admin/funcRemoveAdmin/$1';
+$route['register-admin'] = 'C_admin/index';
+$route['addAdmin'] = 'C_admin/funcRegisterAdmin';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

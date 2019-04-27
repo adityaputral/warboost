@@ -44,13 +44,12 @@ class admin extends CI_Model
 		}
 	}
 
-	function addUser($username, $password, $nama, $email)
+	function addAdmin($username, $password, $nama)
 	{
 		$data = array(
 			'username' => $username,
 			'password' => $password,
 			'nama' => $nama,
-			'email' => $email
 		);
 		$result = $this->db->insert('admin', $data);
 		if ($result) {
