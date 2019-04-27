@@ -55,22 +55,25 @@ class C_checkout extends CI_Controller
             $total_win = $dataCart['total_win'];
             $current_level = $dataCart['current_level'];
             $desired_level = $dataCart['desired_level'];
-            $id_payment = $this->input->post('payment_type');
+            // $id_payment = $this->input->post('payment_type');
             $username_account = $this->input->post('username_akun');
             $password_account = $this->input->post('password_akun');
             $notes = $this->input->post('notes');
 
             // var_dump($price);
     
-            $res = $this->transaksi->funcOrder($tanggal, $id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank, $total_win, $current_level,$desired_level, $id_payment, $username_account, $password_account, $notes);
+            $res = $this->transaksi->funcOrder($tanggal, $id_user, $id_booster, $id_game, $price, $id_tipe_boosting, $current_rank, $desired_rank, $total_win, $current_level,$desired_level, $username_account, $password_account, $notes);
     
             if($res){
                 $this->cart->funcRemoveCart($dataCart['id_cart']);
-
-                $this->session->set_flashdata('status', 'success');
-                $this->session->set_flashdata('notification', 'Success');
-                $referred_from = $this->session->userdata('referred_from');
-                redirect($referred_from, 'refresh');
+                $price=$dataCart['price'];
+                $id=$dataCart['id_tipe_boosting'];
+                $nama=$dataCart['nama_boosting'];
+                $this->session->set_flashdata('cart_price', $price);
+                $this->session->set_flashdata('cart_boost_id', $id);
+                $this->session->set_flashdata('cart_boost_name', $nama);
+                //$referred_from = $this->session->userdata('referred_from');
+                redirect(snap);
                 // echo $this->show_cart($id_user);
             }
             else{

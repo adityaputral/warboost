@@ -8,7 +8,7 @@
                                 
                                 <div class="text-center w-75 m-auto">
                                     <a href="index.html">
-                                        <span><img src="assets/images/logo.png" alt="" height="22"></span>
+                                        <span><img src="assets/assets/images/logo.png" alt="" height="22"></span>
                                     </a>
                                     <p class="text-muted mb-4 mt-3">Enter your username and password to access admin panel.</p>
                                 </div>
